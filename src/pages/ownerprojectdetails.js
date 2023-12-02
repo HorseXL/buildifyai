@@ -12,6 +12,7 @@ import doc_svg from "../assets/images/files/doc.svg"
 import css_svg from "../assets/images/files/css.svg"
 import blogo from '../assets/images/b-logo.jpg'
 import $ from "jquery";
+import SweetAlert from 'react-bootstrap-sweetalert';
 import { logDOM } from '@testing-library/react';
 function ProjectDetailData() {
 
@@ -25,12 +26,8 @@ function ProjectDetailData() {
         setActiveNav(id);
     };
 
-	function filepage(){
+	const [approveSweetAlert,setApproveSweetAlert] = useState(false);
 
-		$('.folderpage').removeClass('show active pagehide');
-		$('.filepage').addClass('show active pagehide');
-
-    }
   return (
 		<div className="d-flex flex-column flex-column-fluid">
 			{/* <!--begin::Content--> */}
@@ -108,7 +105,8 @@ function ProjectDetailData() {
 							{/* <!--end::Info--> */}
 						</div>
 						{/* <!--end::Wrapper--> */}
-						<div className="d-flex justify-content-end"><Link to="#" className="btn btnButton h-45px fs-5 fw-bold mb-1">Invite Builder</Link></div>
+						<div className="d-flex justify-content-end"><Link to="#" className="btn btnButton h-45px fs-5 fw-bold mb-1 mx-1">Invite Builder</Link></div>
+						<div className="d-flex justify-content-end"><Link to="#" className="btn btnButton h-45px fs-5 fw-bold mb-1 mx-1">Invite Sub Contractor</Link></div>
 					</div>
 					{/* <!--end::Details--> */}
 					<div className="separator"></div>
@@ -162,9 +160,9 @@ function ProjectDetailData() {
 						<div className="card-body p-5 tab-pane fade show active" id="kt_tab_1" role="tabpanel">
 						<div className="">	
 							<h3 className="fw-bold mb-10 d-flex text-gray-800">Progression Notes</h3>
-							<div className="d-flex justify-content-end">
+							{/* <div className="d-flex justify-content-end">
 								<Link to="#" className="btn btnButton" data-bs-target="#kt_modal_new_comment">Add Comment</Link>
-							</div>
+							</div> */}
 						</div>
 							{/* <!--begin::Timeline--> */}
 							<div className="timeline">
@@ -201,12 +199,37 @@ function ProjectDetailData() {
 													{/* <!--end::Description--> */}
 													{/* <!--begin::Title--> */}
 													<div className="text-center mt-3 approvereject">
-														<button id="approve" className="btn m-2 p-2 btnButton">approve</button>
+														<button id="approve" className="btn m-2 p-2 btnButton" onClick={() => setApproveSweetAlert(true)}>approve</button>
 														<Link to="#" className="btn p-2 text-white btnDanger" data-bs-target="#kt_modal_new_reject">Reject</Link>
 													</div>
 													{/* <div className="text-center mt-3 ratingHide">
 														<Link to="#" className="btn p-3 m-2 btn-primary" data-bs-toggle="modal" data-bs-target="#kt_modal_new_review">Review</Link>
 													</div> */}
+													{approveSweetAlert && (
+														<>
+														<SweetAlert
+														show={approveSweetAlert}
+														info
+														custom
+														showCancel
+														showCloseButton
+														closeBtnStyle={{color:'black'}}
+														confirmBtnText="Yes"
+														cancelBtnText="No"
+														cancelBtnStyle={{color:'white'}}
+														confirmBtnStyle={{color:'white'}}
+														confirmBtnBsStyle="success"
+														cancelBtnBsStyle="danger"
+														title="Are you sure to Completed"
+														
+														// onConfirm={onConfirm}
+														// onCancel={onCancel}
+														>
+														</SweetAlert>
+														
+														</>
+														
+													)}
 												</div>
 											</div>
 											{/* <!--end::Title--> */}

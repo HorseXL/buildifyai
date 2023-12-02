@@ -3,10 +3,10 @@ import agencyimg from "../assets/images/agency.png"
 import googleimg from "../assets/images/google-icon.svg"
 import appleimg from "../assets/images/apple-black.svg"
 import logo from "../assets/images/Logo.svg"
+import blank from "../assets/images/Avatar/blank.png"
 import "../assets/css/style.bundle.css"
 import {Link, useNavigate} from 'react-router-dom';
 import {fetchFormData,toasterrormsg,toastsuccessmsg,} from "../config/Reausable"
-import { useForm } from 'react-hook-form';
 import { ToastContainer, toast } from "react-toastify";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEye, faEyeSlash } from '@fortawesome/free-solid-svg-icons';
@@ -21,14 +21,41 @@ export default function SignUp() {
 	const [showPassword, setShowPassword] = useState(false);
 	const [showPassword1, setShowPassword1] = useState(false);
 	const [profilePicture, setProfilePicture] = useState(Array);
-	
+	const [viewProfile, setViewProfile] = useState("");
+	const [email,setEmail] = useState("");
+	const [password,setPassword] = useState("");
+	const [repeatPassword,setRepeatPassword] = useState("");
+	const [toc,setToc] = useState("");
+
+	 // set error state
+	const [errors,setErrors]  = useState([{
+        profilePicture: '',
+        email: '',
+        password:'',
+        repeatPassword:'',
+		toc:''
+	}]);
+
+	// remove validation function
+    const removeError = (err) =>{
+        var tmp = [...errors];
+        tmp[0][err] = "";
+        setErrors(tmp);
+    }
+		
 	// preview  profilePicture fucntion 
 	const handleImageChange = (e) => {
-        const selectedFiles = Array.from(e.target.files);
-        const filePaths = selectedFiles.map((file) => file); // Store the selected file names as paths
-        
-        setProfilePicture(URL.createObjectURL(filePaths[0])); // Store the array of image paths
-		errors.profilePicture = ''
+
+		if (e && e.target.files.length > 0) {
+
+			const selectedFiles = Array.from(e.target.files);
+			const filePaths = selectedFiles.map((file) => file); // Store the selected file names as paths
+			
+			setViewProfile(URL.createObjectURL(filePaths[0])); // Store the created url of image
+			setProfilePicture(filePaths[0]); // Store the array of image paths
+			
+		}
+		
     };
 
 	const handleTogglePassword = () => {
@@ -39,26 +66,57 @@ export default function SignUp() {
 		setShowPassword1(!showPassword1);
 	};
 
-	// const [email,setEmail] = useState("")
-	// const [password,setPassword] = useState("")
-	// const [confirmPassword,setConfirmPassword] = useState("")
-	
-	//  signUp Api Call
-	const { 
-		register, 
-		handleSubmit, 
-		formState: { errors }
-	} = useForm();
+	// sign up validation
+	const signUpValidation = () =>{
+		var isValid = true;
+		var errorTmp = [...errors];
+        
+		if (profilePicture == "" || profilePicture == undefined || profilePicture == null) {
+            errorTmp[0].profilePicture = 'Profile picture is required';
+            isValid = false;
+        } 
 
-	const signUpApi = async (value) => {
+		if (email == "" || email == undefined || email == null) {
+            errorTmp[0].email = 'Email is required';
+            isValid = false;
+        } else if(!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}(?:\.[A-Z]{2,})?$/i.test(email)){
+            errorTmp[0].email = 'Please enter valid email.';
+            isValid = false;
+        }
+
+		if (password == "" || password == undefined || password == null) {
+            errorTmp[0].password = 'Password is required';
+            isValid = false;
+        } else if(!/^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,}$/.test(password)){
+            errorTmp[0].password = 'Use 8 or more characters with a mix of letters, numbers & symbols.';
+            isValid = false;
+        }
+
+		if (repeatPassword == "" || repeatPassword == undefined || repeatPassword == null) {
+            errorTmp[0].repeatPassword = 'Repeat Password Is Required.';
+            isValid = false;
+        }
+
+		if (toc == "" || toc == undefined || toc == null) {
+            errorTmp[0].toc = 'This Is Required.';
+            isValid = false;
+        }
+
+		setErrors(errorTmp);
+        return isValid;
+	}
+
+	//  signUp Api Call
+	const signUpApi = async () => {
 		// console.log(value.profilePicture[0]);
-		  
+		if(signUpValidation()){
+
 			setIsloading(true)
 		  const formData = new FormData();
-		  formData.append("email", value.email);
-		  formData.append("profilePicture", value.profilePicture[0]);
-		  formData.append("password", value.password);
-		  formData.append("confirmPassword", value.confirmPassword);
+		  formData.append("email", email);
+		  formData.append("profilePicture", profilePicture);
+		  formData.append("password", password);
+		  formData.append("confirmPassword", repeatPassword);
 		  formData.append("accountType", "");
 		
 		  const response = await fetchFormData('post',"public/registration", formData);
@@ -72,9 +130,10 @@ export default function SignUp() {
 				toasterrormsg(response.message);
 				console.log("Error uploading documents:", response);
 			}
-				// console.log(value.email);
-				// console.log(value.password);
-				// console.log(value.confirmPassword);
+		}
+		else{
+			console.log(signUpValidation());
+		}
 	  };
 
   return (
@@ -157,21 +216,21 @@ export default function SignUp() {
 									</div>
 									{/* <!--end::Separator--> */}
 									{/* <!--begin::Input group=--> */}
-									<form className="form w-100" onSubmit={handleSubmit(signUpApi)}>
+									<div className="form w-100">
 										{/* <!--begin::Col--> */}
                                         <div className="col-lg-8 mb-8">
 										<label className="form-label mb-5 required">Upload Profile Picture</label>
                                             {/* <!--begin::Image input--> */}
                                             <div className="image-input image-input-outline blankImg" data-kt-image-input="true">
                                                 {/* <!--begin::Preview existing avatar--> */}
-                                                <div className="image-input-wrapper w-125px h-125px avatar330-1" alt='profile' style={{backgroundImage:`url(${profilePicture})`}}></div>
+                                                <div className="image-input-wrapper w-125px h-125px avatar330-1" alt='profile' style={{backgroundImage:`url(${viewProfile != "" ? viewProfile : blank})`}}></div>
                                                 {/* <!--end::Preview existing avatar--> */}
 
                                                 {/* <!--begin::Label--> */}
                                                 <label className="btn btn-icon btn-circle btn-active-color-primary w-25px h-25px bg-body shadow" data-kt-image-input-action="change" data-bs-toggle="tooltip" title="Change avatar">
                                                     <i className="ki-outline ki-pencil fs-7"></i>
                                                     {/* <!--begin::Inputs--> */}
-                                                    <input type="file" name="profilePicture" ref={inputfileref} {...register('profilePicture', { required: true})}  onChange={handleImageChange} accept=".png, .jpg, .jpeg"/>
+                                                    <input type="file" name="profilePicture" ref={inputfileref}  onChange={(e) => {handleImageChange(e);removeError("profilePicture");}} accept=".png, .jpg, .jpeg"/>
                                                     {/* <input type="hidden" name="avatar_remove"  /> */}
                                                     {/* <!--end::Inputs--> */}
                                                 </label>
@@ -190,7 +249,7 @@ export default function SignUp() {
                                             {/* <!--end::Image input--> */}
                                             {/* <!--begin::Hint--> */}
                                             <div className="form-text">Allowed file types: png, jpg, jpeg.</div>
-											{errors.profilePicture  && (<span className='error_text'>Profile Picture Is Required.</span>)}
+											<div className='error_text'>{errors[0].profilePicture}</div>
 
                                             {/* <!--end::Hint--> */}
                                         </div>
@@ -206,12 +265,11 @@ export default function SignUp() {
 										name="email"
 										autoComplete="off"
 										className="form-control bg-transparent"
-										value={register.email}
-										{...register('email', { required: true,pattern: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}(?:\.[A-Z]{2,})?$/i })}
+										value={email}
+										onChange={(e) => {setEmail(e.target.value);removeError("email");}}
 										/>
 										{/* {/ Display error message if validation fails /} */}
-										{errors.email && errors.email.type == "required" && (<span className='error_text'>Email Is Required.</span>)}
-										{errors.email && errors.email.type == "pattern" && (<span className='error_text'>Enter Valid Email.</span>)}
+										<div className='error_text'>{errors[0].email}</div>
 
 										{/* {/ <!--end::Email--> /} */}
 
@@ -240,13 +298,11 @@ export default function SignUp() {
 													name="password"
 													autoComplete="off"
 													className="form-control bg-transparent"
-													value={register.password}
-													{...register('password', { required: true,
-														pattern: /^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,}$/ })}
+													value={password}
+													onChange={(e) => {setPassword(e.target.value);removeError("password");}}
 													/>
 													{/* {/ Display error message if validation fails /} */}
-													{errors.password && errors.password.type === "required" && (<span className='error_text'>Password Is Required.</span>)}
-													{errors.password && errors.password.type === "pattern" && (<span className='error_text'>Use 8 or more characters with a mix of letters, numbers & symbols.</span>)}
+													<div className='error_text'>{errors[0].password}</div>
 													
 													{/* end::password */}
 											</div>
@@ -286,14 +342,13 @@ export default function SignUp() {
 													<input
 													type={showPassword1 ? 'text' : 'password'}
 													placeholder="Repeat Password"
-													name="confirm-password"
+													name="repeat-password"
 													autoComplete="off"
 													className="form-control bg-transparent"
-													value={register.confirmPassword}
-													// {...register('confirmPassword', { required: true,validate: (value) => register.confirmPassword != register.password })}
-													{...register('confirmPassword', { required: true })}
+													value={repeatPassword}
+													onChange={(e) => {setRepeatPassword(e.target.value);removeError("repeatPassword");}}
 													/>
-													{errors.confirmPassword && errors.confirmPassword.type == "required" && (<span className='error_text'>Repeat Password Is Required.</span>)}
+													<div className='error_text'>{errors[0].repeatPassword}</div>
 													
 													{/* end::password */}
 											</div>
@@ -316,16 +371,16 @@ export default function SignUp() {
 									{/* <!--begin::Accept--> */}
 									<div className="fv-row mb-8">
 										<label className="form-check form-check-inline">
-											<input className="form-check-input" type="checkbox" name="toc" {...register('toc', { required: true })} value="1"/>
+											<input className="form-check-input" type="checkbox" name="toc" onChange={(e) => {setToc(e.target.value);removeError("toc");}} value="1"/>
 											<span className="form-check-label fw-semibold text-gray-700 fs-base ms-1">I Accept the
 											<Link to="" className="ms-1 link-primary">Terms</Link></span>
 										</label><br/>
-											{errors.toc && errors.toc.type == "required" && (<span className='error_text'>This Is Required.</span>)}
+										<div className='error_text'>{errors[0].toc}</div>
 									</div>
 									{/* <!--end::Accept--> */}
 									{/* <!--begin::Submit button--> */}
 									<div className="d-grid mb-10">
-										<button className="btn form-control btnButton" type='submit'>
+										<button className="btn form-control btnButton" onClick={signUpApi}>
 											{isloading &&(
 
 										  	<span className="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
@@ -334,7 +389,7 @@ export default function SignUp() {
 										</button>
 									</div>
 									{/* <!--end::Submit button--> */}
-									</form>
+									</div>
 									{/* <!--begin::Sign up--> */}
 									<div className="text-gray-500 text-center fw-semibold fs-6">Already have an Account?
 									<Link to="../login/" className="link-primary fw-semibold">Sign in</Link></div>
