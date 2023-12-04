@@ -43904,7 +43904,10 @@ label.rating-label {
 div.rating-label.checked > i, div.rating-label.checked > .svg-icon,
 label.rating-label > i,
 label.rating-label > .svg-icon {
-  color: var(--bs-rating-color-active);
+  
+  /* color: var(--bs-rating-color-active); */
+  color: #FFAD0F;
+  
 }
 
 .rating-input:checked ~ .rating-label > i, .rating-input:checked ~ .rating-label > .svg-icon {
@@ -45879,7 +45882,8 @@ label.rating-label:hover ~ .rating-label > i, label.rating-label:hover ~ .rating
 }
 .text-active-primary.active {
   transition: color 0.2s ease;
-  color: var(--bs-text-primary) !important;
+  /* color: var(--bs-text-primary) !important; */
+  color: #2C9AFF !important;
 }
 .text-active-primary.active i {
   transition: color 0.2s ease;
@@ -48977,4 +48981,26 @@ body,
 }
 .text-danger{
   color: #f1416c !important;
+}
+.cancelBtn{
+  color: white !important;
+  background-color: #F1416C !important;
+}
+.cancelBtn:hover{
+  background-color: #D9214E !important;
+}
+.confirmBtn{
+  color: white !important;
+  background-color: #50CD89 !important;
+}
+.confirmBtn:hover{
+  background-color: #5FB751 !important;
+}
+
+/* modal style */
+.ReactModalPortal{
+  z-index: 999 !important;
+}
+.ReactModal__Overlay {
+  background-color: rgba(0, 0, 0, 0.50) !important;
 }

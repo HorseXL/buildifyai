@@ -7,27 +7,49 @@ import avtar_300_5 from "../assets/images/Avatar/300-5.jpg"
 import avtar_300_6 from "../assets/images/Avatar/300-6.jpg"
 import avtar_300_9 from "../assets/images/Avatar/300-9.jpg"
 import avtar_300_10 from "../assets/images/Avatar/300-10.jpg"
+import question_mark from "../assets/images/question_mark.png"
 import pdf_svg from "../assets/images/files/pdf.svg"
 import doc_svg from "../assets/images/files/doc.svg"
 import css_svg from "../assets/images/files/css.svg"
 import blogo from '../assets/images/b-logo.jpg'
-import $ from "jquery";
 import SweetAlert from 'react-bootstrap-sweetalert';
 import { logDOM } from '@testing-library/react';
+import Modal from 'react-modal';
+
+
 function ProjectDetailData() {
 
 	document.title = 'Buildify AI | Owner Project Details';
 
 	const [activeNav, setActiveNav] = useState(1);
 	const [uploadFileModel, setUploadFileModel] = useState(false);
-	// console.log("uploadFileModel =",uploadFileModel);
-
+	const [rejectModel, setRejectModel] = useState(false);
+	const [reviewModel, setReviewModel] = useState(false);
+	
     const changeNave = (id) => {
         setActiveNav(id);
     };
 
 	const [approveSweetAlert,setApproveSweetAlert] = useState(false);
+	const [showApproveRejectBtn,setShowApproveRejectBtn] = useState(true);
+	const [showReviewBtn,setShowReviewBtn] = useState(false);
 
+	const onConfirm = () =>{
+		setShowReviewBtn(true);
+		setShowApproveRejectBtn(false);
+		setApproveSweetAlert(false);
+	}
+
+	const customStyles = {
+		content: {
+			top: '50%',
+			left: '50%',
+			right: 'auto',
+			bottom: 'auto',
+			marginRight: '-50%'
+			
+		},
+	  };
   return (
 		<div className="d-flex flex-column flex-column-fluid">
 			{/* <!--begin::Content--> */}
@@ -198,37 +220,39 @@ function ProjectDetailData() {
 													</div>
 													{/* <!--end::Description--> */}
 													{/* <!--begin::Title--> */}
-													<div className="text-center mt-3 approvereject">
-														<button id="approve" className="btn m-2 p-2 btnButton" onClick={() => setApproveSweetAlert(true)}>approve</button>
-														<Link to="#" className="btn p-2 text-white btnDanger" data-bs-target="#kt_modal_new_reject">Reject</Link>
-													</div>
-													{/* <div className="text-center mt-3 ratingHide">
-														<Link to="#" className="btn p-3 m-2 btn-primary" data-bs-toggle="modal" data-bs-target="#kt_modal_new_review">Review</Link>
-													</div> */}
+													{ showApproveRejectBtn && (
+														<div className="text-center mt-3 approvereject">
+															<button id="approve" className="btn m-2 p-2 btnButton" onClick={() => setApproveSweetAlert(true)}>approve</button>
+															<button className="btn p-2 text-white btnDanger" onClick={()=> setRejectModel(true)}>Reject</button>
+														</div>
+													)}
+													{ showReviewBtn && (
+														<div className="text-center mt-3 ratingHide">
+															<button className="btn p-3 m-2 btnButton" onClick={() => setReviewModel(true)}>Review</button>
+														</div>
+													)}
 													{approveSweetAlert && (
 														<>
 														<SweetAlert
 														show={approveSweetAlert}
-														info
-														custom
-														showCancel
-														showCloseButton
-														closeBtnStyle={{color:'black'}}
-														confirmBtnText="Yes"
-														cancelBtnText="No"
-														cancelBtnStyle={{color:'white'}}
-														confirmBtnStyle={{color:'white'}}
-														confirmBtnBsStyle="success"
-														cancelBtnBsStyle="danger"
-														title="Are you sure to Completed"
 														
-														// onConfirm={onConfirm}
-														// onCancel={onCancel}
+														custom
+														customIcon={question_mark}
+														showCancel
+														showCloseButton={true}
+														closeOnClickOutside={true}
+														confirmBtnText="Yes"
+														confirmBtnBsStyle=" success"
+														confirmBtnCssClass='confirmBtn'
+														cancelBtnText="No"
+														cancelBtnBsStyle=" danger"
+														cancelBtnCssClass='cancelBtn'
+														title="Are you sure to Completed"
+														onConfirm={onConfirm}
+														onCancel={() => setApproveSweetAlert(false)}
 														>
 														</SweetAlert>
-														
 														</>
-														
 													)}
 												</div>
 											</div>
@@ -3298,97 +3322,233 @@ function ProjectDetailData() {
 				{/* <!--end::Card body--> */}
 			</div>
 			{/* <!--end::Row--> */}
-				{/* <!--begin::Modal - Upload File--> */}
-				{uploadFileModel == true && (
-
-				<div className="modal fade" id="kt_modal_upload" tabindex="-1" aria-hidden="true">
-							{/* <!--begin::Modal dialog--> */}
-							<div className="modal-dialog modal-dialog-centered mw-650px">
-								{/* <!--begin::Modal content--> */}
-								<div className="modal-content">
-									{/* <!--begin::Form--> */}
-									<form className="form" action="none" id="kt_modal_upload_form">
-										{/* <!--begin::Modal header--> */}
-										<div className="modal-header">
-											{/* <!--begin::Modal title--> */}
-											<h2 className="fw-bold">Upload files</h2>
-											{/* <!--end::Modal title--> */}
-											{/* <!--begin::Close--> */}
-											<div className="btn btn-icon btn-sm btn-active-icon-primary" data-bs-dismiss="modal">
-												<i className="ki-outline ki-cross fs-1"></i>
-											</div>
-											{/* <!--end::Close--> */}
-										</div>
-										{/* <!--end::Modal header--> */}
-										{/* <!--begin::Modal body--> */}
-										<div className="modal-body pt-10 pb-15 px-lg-17">
-											{/* <!--begin::Input group--> */}
-											<div className="form-group">
-												{/* <!--begin::Dropzone--> */}
-												<div className="dropzone dropzone-queue mb-2" id="kt_modal_upload_dropzone">
-													{/* <!--begin::Controls--> */}
-													<div className="dropzone-panel mb-4">
-														<Link className="dropzone-select btn btn-sm btn-primary me-2">Attach files</Link>
-														<Link className="dropzone-upload btn btn-sm btn-light-primary me-2">Upload All</Link>
-														<Link className="dropzone-remove-all btn btn-sm btn-light-primary">Remove All</Link>
-													</div>
-													{/* <!--end::Controls--> */}
-													{/* <!--begin::Items--> */}
-													<div className="dropzone-items wm-200px">
-														<div className="dropzone-item p-5" style={{display:"none"}}>
-															{/* <!--begin::File--> */}
-															<div className="dropzone-file">
-																<div className="dropzone-filename text-dark" title="some_image_file_name.jpg">
-																	<span data-dz-name="">some_image_file_name.jpg</span>
-																	<strong>(
-																	<span data-dz-size="">340kb</span>)</strong>
-																</div>
-																<div className="dropzone-error mt-0" data-dz-errormessage=""></div>
-															</div>
-															{/* <!--end::File--> */}
-															{/* <!--begin::Progress--> */}
-															<div className="dropzone-progress">
-																<div className="progress bg-gray-300">
-																	<div className="progress-bar bg-primary" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" data-dz-uploadprogress=""></div>
-																</div>
-															</div>
-															{/* <!--end::Progress--> */}
-															{/* <!--begin::Toolbar--> */}
-															<div className="dropzone-toolbar">
-																<span className="dropzone-start">
-																	<i className="ki-outline ki-to-right fs-1"></i>
-																</span>
-																<span className="dropzone-cancel" data-dz-remove="" style={{display:"none"}}>
-																	<i className="ki-outline ki-cross fs-2"></i>
-																</span>
-																<span className="dropzone-delete" data-dz-remove="">
-																	<i className="ki-outline ki-cross fs-2"></i>
-																</span>
-															</div>
-															{/* <!--end::Toolbar--> */}
-														</div>
-													</div>
-													{/* <!--end::Items--> */}
-												</div>
-												{/* <!--end::Dropzone--> */}
-												{/* <!--begin::Hint--> */}
-												<span className="form-text fs-6 text-muted">Max file size is 1MB per file.</span>
-												{/* <!--end::Hint--> */}
-											</div>
-											{/* <!--end::Input group--> */}
-										</div>
-										{/* <!--end::Modal body--> */}
-									</form>
-									{/* <!--end::Form--> */}
-								</div>
-							</div>
-				</div>
-				)}
-
-				{/* <!--end::Modal - Upload File--> */}
-
 			</div>
 			{/* <!--end::Content--> */}
+			{/* <!--begin::Modal - Upload File--> */}
+			{uploadFileModel == true && (
+
+			<div className="modal fade" id="kt_modal_upload" tabIndex="-1" aria-hidden="true">
+						{/* <!--begin::Modal dialog--> */}
+						<div className="modal-dialog modal-dialog-centered mw-650px">
+							{/* <!--begin::Modal content--> */}
+							<div className="modal-content">
+								{/* <!--begin::Form--> */}
+								<div className="form" id="kt_modal_upload_form">
+									{/* <!--begin::Modal header--> */}
+									<div className="modal-header">
+										{/* <!--begin::Modal title--> */}
+										<h2 className="fw-bold">Upload files</h2>
+										{/* <!--end::Modal title--> */}
+										{/* <!--begin::Close--> */}
+										<div className="btn btn-icon btn-sm btn-active-icon-primary" data-bs-dismiss="modal">
+											<i className="ki-outline ki-cross fs-1"></i>
+										</div>
+										{/* <!--end::Close--> */}
+									</div>
+									{/* <!--end::Modal header--> */}
+									{/* <!--begin::Modal body--> */}
+									<div className="modal-body pt-10 pb-15 px-lg-17">
+										{/* <!--begin::Input group--> */}
+										<div className="form-group">
+											{/* <!--begin::Dropzone--> */}
+											<div className="dropzone dropzone-queue mb-2" id="kt_modal_upload_dropzone">
+												{/* <!--begin::Controls--> */}
+												<div className="dropzone-panel mb-4">
+													<Link className="dropzone-select btn btn-sm btn-primary me-2">Attach files</Link>
+													<Link className="dropzone-upload btn btn-sm btn-light-primary me-2">Upload All</Link>
+													<Link className="dropzone-remove-all btn btn-sm btn-light-primary">Remove All</Link>
+												</div>
+												{/* <!--end::Controls--> */}
+												{/* <!--begin::Items--> */}
+												<div className="dropzone-items wm-200px">
+													<div className="dropzone-item p-5" style={{display:"none"}}>
+														{/* <!--begin::File--> */}
+														<div className="dropzone-file">
+															<div className="dropzone-filename text-dark" title="some_image_file_name.jpg">
+																<span data-dz-name="">some_image_file_name.jpg</span>
+																<strong>(
+																<span data-dz-size="">340kb</span>)</strong>
+															</div>
+															<div className="dropzone-error mt-0" data-dz-errormessage=""></div>
+														</div>
+														{/* <!--end::File--> */}
+														{/* <!--begin::Progress--> */}
+														<div className="dropzone-progress">
+															<div className="progress bg-gray-300">
+																<div className="progress-bar bg-primary" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" data-dz-uploadprogress=""></div>
+															</div>
+														</div>
+														{/* <!--end::Progress--> */}
+														{/* <!--begin::Toolbar--> */}
+														<div className="dropzone-toolbar">
+															<span className="dropzone-start">
+																<i className="ki-outline ki-to-right fs-1"></i>
+															</span>
+															<span className="dropzone-cancel" data-dz-remove="" style={{display:"none"}}>
+																<i className="ki-outline ki-cross fs-2"></i>
+															</span>
+															<span className="dropzone-delete" data-dz-remove="">
+																<i className="ki-outline ki-cross fs-2"></i>
+															</span>
+														</div>
+														{/* <!--end::Toolbar--> */}
+													</div>
+												</div>
+												{/* <!--end::Items--> */}
+											</div>
+											{/* <!--end::Dropzone--> */}
+											{/* <!--begin::Hint--> */}
+											<span className="form-text fs-6 text-muted">Max file size is 1MB per file.</span>
+											{/* <!--end::Hint--> */}
+										</div>
+										{/* <!--end::Input group--> */}
+									</div>
+									{/* <!--end::Modal body--> */}
+								</div>
+								{/* <!--end::Form--> */}
+							</div>
+						</div>
+			</div>
+			)}
+			{/* <!--end::Modal - Upload File--> */}
+			{/* <!--begin::Modal - Reject--> */}
+			
+			<Modal 
+			isOpen={rejectModel}
+			onRequestClose={() => setRejectModel(false)}
+			style={customStyles}
+			>
+				<div className="modal fade show" id="kt_modal_new_reject" tabIndex="-1" style={{display:"block"}}>
+					{/* <!--begin::Modal dialog--> */}
+					<div className="modal-dialog modal-dialog-centered mw-650px">
+						{/* <!--begin::Modal content--> */}
+						<div className="modal-content rounded">
+							{/* <!--begin::Modal header--> */}
+							<div className="modal-header pb-0 border-0 justify-content-end">
+								{/* <!--begin::Close--> */}
+								<button className="btn btn-sm btn-icon btn-active-color-primary" onClick={()=>setRejectModel(false)}>
+									<i className="ki-outline ki-cross fs-1"></i>
+								</button>
+								{/* <!--end::Close--> */}
+							</div>
+							{/* <!--begin::Modal header--> */}
+							{/* <!--begin::Modal body--> */}
+							<div className="modal-body scroll-y px-10 px-lg-15 pt-0 pb-15">
+								{/* <!--begin:Form--> */}
+								<div id="kt_modal_new_target_form" className="form fv-plugins-bootstrap5 fv-plugins-framework" >
+									{/* <!--begin::Heading--> */}
+									<div className="mb-13 text-center">
+										{/* <!--begin::Title--> */}
+										<h1 className="mb-3">Reject Reason</h1>
+										{/* <!--end::Title--> */}
+										{/* <!--begin::Description--> */}
+										{/* <!--end::Description--> */}
+									</div>
+									{/* <!--end::Heading--> */}
+									{/* <!--begin::Input group--> */}
+									<div className="d-flex flex-column mb-5 mt-5 fv-row fs-6 fw-semibold fv-plugins-icon-container">
+											<span className="fs-3"> Rejection </span>
+											<textarea className="form-control my-3"> </textarea>
+									<div className="fv-plugins-message-container invalid-feedback"></div></div>
+									<div className="text-center">
+										<button type="reset" className="btn btnLightPrimary mx-1"> Cancel</button>
+										<button type="submit" id="kt_modal_new_target_submit" className="btn btnButton me-3 mx-1">
+											<span className="indicator-label">Submit</span>
+											<span className="indicator-progress">Submit..
+											<span className="spinner-border spinner-border-sm align-middle ms-2"></span></span>
+										</button>
+									</div>
+									{/* <!--end::Actions--> */}
+								</div>
+								{/* <!--end:Form--> */}
+							</div>
+							{/* <!--end::Modal body--> */}
+						</div>
+						{/* <!--end::Modal content--> */}
+					</div>
+					{/* <!--end::Modal dialog--> */}
+				</div>
+			</Modal>
+			{/* <!--end::Modal - Reject--> */}
+			
+			{/* <!--begin::Modal Review--> */}
+			<Modal 
+			isOpen={reviewModel}
+			onRequestClose={() => setReviewModel(false)}
+			style={customStyles}
+			>
+				<div className="modal fade show" id="kt_modal_new_review" tabindex="-1" style={{display:"block"}}>
+					{/* <!--begin::Modal dialog--> */}
+					<div className="modal-dialog modal-dialog-centered mw-450px">
+						{/* <!--begin::Modal content--> */}
+						<div className="modal-content rounded">
+							{/* <!--begin::Modal header--> */}
+							<div className="modal-header pb-0 border-0 justify-content-end">
+								{/* <!--begin::Close--> */}
+								<button className="btn btn-sm btn-icon btn-active-color-primary" onClick={() => setReviewModel(false)}>
+									<i className="ki-outline ki-cross fs-1"></i>
+								</button>
+								{/* <!--end::Close--> */}
+							</div>
+							{/* <!--begin::Modal header--> */}
+							{/* <!--begin::Modal body--> */}
+							<div className="modal-body scroll-y px-10 px-lg-15 pt-0 pb-15">
+								{/* <!--begin:Form--> */}
+								<div id="kt_modal_new_target_form" className="form fv-plugins-bootstrap5 fv-plugins-framework">
+									{/* <!--begin::Heading--> */}
+									<div className="mb-13 text-center">
+										{/* <!--begin::Title--> */}
+										<h1 className="mb-3">Rating</h1>
+										{/* <!--end::Title--> */}
+									</div>
+									{/* <!--end::Heading--> */}
+									{/* <!--begin::Input group--> */}
+									<div className="row">
+										<div className="col-lg-12 fs-6 fw-semibold">
+											{/* <!--begin::Label--> */}
+											<span className="text-gray-400 fw-semibold d-block fs-4">Rating</span>
+											<div className="rating my-4">
+												<div className="rating-label checked">
+													<i className="ki-outline ki-star fs-1"></i>
+												</div>
+												<div className="rating-label checked">
+													<i className="ki-outline ki-star fs-1"></i> 
+												</div>
+												<div className="rating-label checked">
+													<i className="ki-outline ki-star fs-1"></i> 
+												</div>
+												<div className="rating-label checked">
+													<i className="ki-outline ki-star fs-1"></i> 
+												</div>
+												<div className="rating-label checked">
+													<i className="ki-outline ki-star fs-1"></i> 
+												</div>
+											</div>
+											<span className="text-gray-400 fw-semibold d-block fs-4">Review</span>
+											<textarea className="form-control mb-2 mt-3"></textarea>
+										</div>
+									</div>
+									{/* <!--begin::Input group--> */}
+									<div className="text-center mt-3">
+										<button id="#" className="btn btnButton me-3">
+											<span className="indicator-label">Submit</span>
+											<span className="indicator-progress">Submit
+											<span className="spinner-border spinner-border-sm align-middle ms-2"></span></span>
+										</button>
+									</div>
+									{/* <!--end::Actions--> */}
+								</div>
+								{/* <!--end:Form--> */}
+							</div>
+							{/* <!--end::Modal body--> */}
+						</div>
+						{/* <!--end::Modal content--> */}
+					</div>
+					{/* <!--end::Modal dialog--> */}
+				</div>
+			</Modal>
+			{/* <!--end::Modal Review--> */}
+
 		</div>
   )
 }

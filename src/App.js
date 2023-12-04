@@ -21,6 +21,7 @@ import Otpverification from "./pages/otpverification";
 import ProfileData from "./pages/profile";
 import SubcontractorProjectDetail from "./pages/subcontractorprojectdetails";
 import OwnerProjectDetail from "./pages/ownerprojectdetails";
+import CreateProject from "./pages/createproject";
 
 function App() {
 
@@ -42,6 +43,7 @@ function App() {
         <Route path="/profile" element={<ProfileData />} />
         <Route path="/subcontractorprojectdetails" element={<SubcontractorProjectDetail />} />
         <Route path="/ownerprojectdetails" element={<OwnerProjectDetail />} />
+        <Route path="/createproject" element={<CreateProject />} />
         
       </Routes>
     {/* </Router> */}
