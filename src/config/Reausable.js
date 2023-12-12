@@ -159,7 +159,7 @@ export const fetchDataPrivate = async (method,url, raw) => {
 
 export const URL =
 {
-    uatUrl: 'https://api.gogagner.com/BF/',
+    uatUrl: '',
     xtoken: "",
     fcmToken: ""
 }

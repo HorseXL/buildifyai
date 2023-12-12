@@ -169,8 +169,7 @@ export const fetchDataPrivate = async (url, raw) => {
 
 export const URL =
 {
-    uatUrl: 'https://api.gogagner.com/BF/',
-    // prodUrl: 'https://dawnapplication.azurewebsites.net/HI/api/',
+    uatUrl: '',
     xtoken: "",
     fcmToken: ""
 }
