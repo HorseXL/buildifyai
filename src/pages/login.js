@@ -42,7 +42,8 @@ export default function Login() {
 
 		let data = {
 			"email": value.email,
-			"password": value.password
+			"password": value.password,
+			"os":"WEB"
 			};
 
 		var response = await fetchDataPrivate('post',"public/login",data);
