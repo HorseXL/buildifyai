@@ -20,6 +20,7 @@ export default function Otpverification() {
     const [code_4, setCode_4] = useState('');
     const [code_5, setCode_5] = useState('');
     const [code_6, setCode_6] = useState('');
+    const [isloading, setIsloading] = useState(false);
 
     const otp = `${code_1}${code_2}${code_3}${code_4}${code_5}${code_6}`;
 
@@ -28,6 +29,7 @@ export default function Otpverification() {
     // verify otp api call
     const verifyOTPApi = async () => {
 
+        setIsloading(true);
         let data = { "otp": otp };
 
         var response = await fetchDataPrivate('post',"api/verifyOTP", data);
@@ -35,6 +37,7 @@ export default function Otpverification() {
             // window.localStorage.setItem('token',response.data[0].token);
             navigate("../resetpassword/");
         } else {
+            setIsloading(false);
             toasterrormsg(response.message);
         }
     }
@@ -155,9 +158,10 @@ export default function Otpverification() {
                                         {/* <!--begin::Submit--> */}
                                         <div className="d-flex flex-center">
                                             <button className="btn btn-lg fw-bold btnButton" onClick={() => { verifyOTPApi() }}>
+                                                {isloading &&(
+                                                    <span className="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+                                                )} 
                                                 <span className="indicator-label">Submit</span>
-                                                <span className="indicator-progress">Please wait...
-                                                    <span className="spinner-border spinner-border-sm align-middle ms-2"></span></span>
                                             </button>
                                         </div>
                                         {/* <!--end::Submit--> */}

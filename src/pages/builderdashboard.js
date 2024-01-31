@@ -12,7 +12,7 @@ function DashboardData() {
 
   document.title = 'Buildify AI | Builder Dashboard'
 
-  const navigate = useNavigate();
+  const navigate = useNavigate(); 
 
   useEffect(() =>{
     const userId = window.localStorage.getItem("buildifyUserId");
@@ -37,12 +37,15 @@ function DashboardData() {
               {/* <!--begin::Card widget 16--> */}
               <div className="card card-flush bgi-no-repeat bgi-size-contain bgi-position-x-center border-0 mb-5 mb-xl-10" style={{ backgroundColor: '#080655' }}>
                 {/* <!--begin::Header--> */}
-                <div className="card-header pt-5">
+                <div className="p-5">
                   {/* <!--begin::Title--> */}
                   <div className="card-title d-flex flex-column">
-                    {/* <!--begin::Amount--> */}
-                    <span className="fs-2hx fw-bold me-2 lh-1 ls-n2" style={{color: 'white'}}>69</span>
-                    {/* <!--end::Amount--> */}
+                      <div className="d-flex justify-content-between fw-bold fs-6 text-white w-100 mt-auto mb-2">
+                        {/* <!--begin::Amount--> */}
+                        <span className="d-flex align-items-start fs-2hx fw-bold me-2 lh-1 ls-n2" style={{color: 'white'}}>69</span>
+                        <span className='d-flex align-items-end'><Link to="../builderaddproject/" className='btn createpro'>Create Project</Link></span>
+                        {/* <!--end::Amount--> */}
+                    </div>
                     {/* <!--begin::Subtitle--> */}
                     <span className="text-white opacity-50 pt-1 fw-semibold fs-6">Active Projects</span>
                     {/* <!--end::Subtitle--> */}
@@ -170,7 +173,7 @@ function DashboardData() {
                                 {/* <!--end::Avatar--> */}
                                 {/* <!--begin::User details--> */}
                                 <div className="d-flex flex-column">
-                                  <Link to="#">
+                                  <Link to="../builderprojectdetails/">
                                     <div className="fs-3 text-dark">Home Renovation</div>
                                     <div className="fs-6 text-muted fw-bold">BTG-2356</div>
                                   </Link>
@@ -186,7 +189,7 @@ function DashboardData() {
                                 <span className="badge badge-light-success">Active</span>
                               </td>
                               <td className="text-end">
-                                <Link to="#" className="btn btn-sm btn-icon btn-bg-light btn-active-color-primary" data-bs-toggle="tooltip" data-bs-trigger="hover" title="Project Details">
+                                <Link to="../builderprojectdetails/" className="btn btn-sm btn-icon btn-bg-light btn-active-color-primary" data-bs-toggle="tooltip" data-bs-trigger="hover" title="Project Details">
                                   <i className="ki-outline ki-arrow-right fs-2"></i>
                                 </Link>
                               </td>
@@ -202,7 +205,7 @@ function DashboardData() {
                                 {/* <!--end::Avatar--> */}
                                 {/* <!--begin::User details--> */}
                                 <div className="d-flex flex-column">
-                                  <Link to="#">
+                                  <Link to="../builderprojectdetails/">
                                     <div className="fs-3 text-dark">Residential Building</div>
                                     <div className="fs-6 text-muted fw-bold">BTG-2357</div>
                                   </Link>
@@ -218,7 +221,7 @@ function DashboardData() {
                                 <span className="badge badge-light-success">Active</span>
                               </td>
                               <td className="text-end">
-                                <Link to="#" className="btn btn-sm btn-icon btn-bg-light btn-active-color-primary" data-bs-toggle="tooltip" data-bs-trigger="hover" title="Project Details">
+                                <Link to="../builderprojectdetails/" className="btn btn-sm btn-icon btn-bg-light btn-active-color-primary" data-bs-toggle="tooltip" data-bs-trigger="hover" title="Project Details">
                                   <i className="ki-outline ki-arrow-right fs-2"></i>
                                 </Link>
                               </td>
@@ -234,7 +237,7 @@ function DashboardData() {
                                 {/* <!--end::Avatar--> */}
                                 {/* <!--begin::User details--> */}
                                 <div className="d-flex flex-column">
-                                  <Link to="#">
+                                  <Link to="../builderprojectdetails/">
                                     <div className="fs-3 text-dark">Federal Construction</div>
                                     <div className="fs-6 text-muted fw-bold">BTG-2359</div>
                                   </Link>
@@ -250,7 +253,7 @@ function DashboardData() {
                                 <span className="badge badge-light-success">Active</span>
                               </td>
                               <td className="text-end">
-                                <Link to="#" className="btn btn-sm btn-icon btn-bg-light btn-active-color-primary" data-bs-toggle="tooltip" data-bs-trigger="hover" title="Project Details">
+                                <Link to="../builderprojectdetails/" className="btn btn-sm btn-icon btn-bg-light btn-active-color-primary" data-bs-toggle="tooltip" data-bs-trigger="hover" title="Project Details">
                                   <i className="ki-outline ki-arrow-right fs-2"></i>
                                 </Link>
                               </td>
@@ -266,7 +269,7 @@ function DashboardData() {
                                 {/* <!--end::Avatar--> */}
                                 {/* <!--begin::User details--> */}
                                 <div className="d-flex flex-column">
-                                  <Link to="#">
+                                  <Link to="../builderprojectdetails/">
                                     <div className="fs-3 text-dark">Commercial Outlook</div>
                                     <div className="fs-6 text-muted fw-bold">BTG-2360</div>
                                   </Link>
@@ -282,7 +285,7 @@ function DashboardData() {
                                 <span className="badge badge-light-success">Active</span>
                               </td>
                               <td className="text-end">
-                                <Link to="#" className="btn btn-sm btn-icon btn-bg-light btn-active-color-primary" data-bs-toggle="tooltip" data-bs-trigger="hover" title="Project Details">
+                                <Link to="../builderprojectdetails/" className="btn btn-sm btn-icon btn-bg-light btn-active-color-primary" data-bs-toggle="tooltip" data-bs-trigger="hover" title="Project Details">
                                   <i className="ki-outline ki-arrow-right fs-2"></i>
                                 </Link>
                               </td>
@@ -321,7 +324,7 @@ function DashboardData() {
                                 {/* <!--end::Avatar--> */}
                                 {/* <!--begin::User details--> */}
                                 <div className="d-flex flex-column">
-                                  <Link to="#">
+                                  <Link to="../builderprojectdetails/">
                                     <div className="fs-3 text-dark">Home Renovation</div>
                                     <div className="fs-6 text-muted fw-bold">BTG-2356</div>
                                   </Link>
@@ -337,7 +340,7 @@ function DashboardData() {
                                 <span className="badge badge-light-primary">Completed</span>
                               </td>
                               <td className="text-end">
-                                <Link to="#" className="btn btn-sm btn-icon btn-bg-light btn-active-color-primary" data-bs-toggle="tooltip" data-bs-trigger="hover" title="Project Details">
+                                <Link to="../builderprojectdetails/" className="btn btn-sm btn-icon btn-bg-light btn-active-color-primary" data-bs-toggle="tooltip" data-bs-trigger="hover" title="Project Details">
                                   <i className="ki-outline ki-arrow-right fs-2"></i>
                                 </Link>
                               </td>
@@ -353,7 +356,7 @@ function DashboardData() {
                                 {/* <!--end::Avatar--> */}
                                 {/* <!--begin::User details--> */}
                                 <div className="d-flex flex-column">
-                                  <Link to="#">
+                                  <Link to="../builderprojectdetails/">
                                     <div className="fs-3 text-dark">Residential Building</div>
                                     <div className="fs-6 text-muted fw-bold">BTG-2357</div>
                                   </Link>
@@ -369,7 +372,7 @@ function DashboardData() {
                                 <span className="badge badge-light-primary">Completed</span>
                               </td>
                               <td className="text-end">
-                                <Link to="#" className="btn btn-sm btn-icon btn-bg-light btn-active-color-primary" data-bs-toggle="tooltip" data-bs-trigger="hover" title="Project Details">
+                                <Link to="../builderprojectdetails/" className="btn btn-sm btn-icon btn-bg-light btn-active-color-primary" data-bs-toggle="tooltip" data-bs-trigger="hover" title="Project Details">
                                   <i className="ki-outline ki-arrow-right fs-2"></i>
                                 </Link>
                               </td>
@@ -385,7 +388,7 @@ function DashboardData() {
                                 {/* <!--end::Avatar--> */}
                                 {/* <!--begin::User details--> */}
                                 <div className="d-flex flex-column">
-                                  <Link to="#">
+                                  <Link to="../builderprojectdetails/">
                                     <div className="fs-3 text-dark">Federal Construction</div>
                                     <div className="fs-6 text-muted fw-bold">BTG-2358</div>
                                   </Link>
@@ -401,7 +404,7 @@ function DashboardData() {
                                 <span className="badge badge-light-primary">Completed</span>
                               </td>
                               <td className="text-end">
-                                <Link to="#" className="btn btn-sm btn-icon btn-bg-light btn-active-color-primary" data-bs-toggle="tooltip" data-bs-trigger="hover" title="Project Details">
+                                <Link to="../builderprojectdetails/" className="btn btn-sm btn-icon btn-bg-light btn-active-color-primary" data-bs-toggle="tooltip" data-bs-trigger="hover" title="Project Details">
                                   <i className="ki-outline ki-arrow-right fs-2"></i>
                                 </Link>
                               </td>
@@ -417,7 +420,7 @@ function DashboardData() {
                                 {/* <!--end::Avatar--> */}
                                 {/* <!--begin::User details--> */}
                                 <div className="d-flex flex-column">
-                                  <Link to="#">
+                                  <Link to="../builderprojectdetails/">
                                     <div className="fs-3 text-dark">Commercial Outlook</div>
                                     <div className="fs-6 text-muted fw-bold">BTG-2359</div>
                                   </Link>
@@ -433,7 +436,7 @@ function DashboardData() {
                                 <span className="badge badge-light-primary">Completed</span>
                               </td>
                               <td className="text-end">
-                                <Link to="#" className="btn btn-sm btn-icon btn-bg-light btn-active-color-primary" data-bs-toggle="tooltip" data-bs-trigger="hover" title="Project Details">
+                                <Link to="../builderprojectdetails/" className="btn btn-sm btn-icon btn-bg-light btn-active-color-primary" data-bs-toggle="tooltip" data-bs-trigger="hover" title="Project Details">
                                   <i className="ki-outline ki-arrow-right fs-2"></i>
                                 </Link>
                               </td>
@@ -449,7 +452,7 @@ function DashboardData() {
                                 {/* <!--end::Avatar--> */}
                                 {/* <!--begin::User details--> */}
                                 <div className="d-flex flex-column">
-                                  <Link to="#">
+                                  <Link to="../builderprojectdetails/">
                                     <div className="fs-3 text-dark">State Construction Project</div>
                                     <div className="fs-6 text-muted fw-bold">BTG-2360</div>
                                   </Link>
@@ -465,7 +468,7 @@ function DashboardData() {
                                 <span className="badge badge-light-primary">Completed</span>
                               </td>
                               <td className="text-end">
-                                <Link to="#" className="btn btn-sm btn-icon btn-bg-light btn-active-color-primary" data-bs-toggle="tooltip" data-bs-trigger="hover" title="Project Details">
+                                <Link to="../builderprojectdetails/" className="btn btn-sm btn-icon btn-bg-light btn-active-color-primary" data-bs-toggle="tooltip" data-bs-trigger="hover" title="Project Details">
                                   <i className="ki-outline ki-arrow-right fs-2"></i>
                                 </Link>
                               </td>
@@ -549,7 +552,7 @@ function DashboardData() {
                                 {/* <!--end::Avatar--> */}
                                 {/* <!--begin::User details--> */}
                                 <div className="d-flex flex-column">
-                                  <Link to="#">
+                                  <Link to="../builderprojectdetails/">
                                     <div className="fs-3 text-dark">Home Renovation</div>
                                     <div className="fs-6 text-muted fw-bold">BTG-2356</div>
                                   </Link>
@@ -562,10 +565,10 @@ function DashboardData() {
                                 </Link>
                               </td>
                               <td className="text-end">
-                                <Link to="#" className="btn btnButton">Bid</Link>
+                                <Link to="../builderaddbid/" className="btn btnButton">Bid</Link>
                               </td>
                               <td className="text-end">
-                                <Link to="#" className="btn btn-sm btn-icon btn-bg-light btn-active-color-primary" data-bs-toggle="tooltip" data-bs-trigger="hover" title="Project Details">
+                                <Link to="../builderprojectdetails/" className="btn btn-sm btn-icon btn-bg-light btn-active-color-primary" data-bs-toggle="tooltip" data-bs-trigger="hover" title="Project Details">
                                   <i className="ki-outline ki-arrow-right fs-2"></i>
                                 </Link>
                               </td>
@@ -581,7 +584,7 @@ function DashboardData() {
                                 {/* <!--end::Avatar--> */}
                                 {/* <!--begin::User details--> */}
                                 <div className="d-flex flex-column">
-                                  <Link to="#">
+                                  <Link to="../builderprojectdetails/">
                                     <div className="fs-3 text-dark">Residential Building</div>
                                     <div className="fs-6 text-muted fw-bold">BTG-2356</div>
                                   </Link>
@@ -594,10 +597,10 @@ function DashboardData() {
                                 </Link>
                               </td>
                               <td className="text-end">
-                                <Link to="#" className="btn btnButton">Bid</Link>
+                                <Link to="../builderaddbid/" className="btn btnButton">Bid</Link>
                               </td>
                               <td className="text-end">
-                                <Link to="#" className="btn btn-sm btn-icon btn-bg-light btn-active-color-primary" data-bs-toggle="tooltip" data-bs-trigger="hover" title="Project Details">
+                                <Link to="../builderprojectdetails/" className="btn btn-sm btn-icon btn-bg-light btn-active-color-primary" data-bs-toggle="tooltip" data-bs-trigger="hover" title="Project Details">
                                   <i className="ki-outline ki-arrow-right fs-2"></i>
                                 </Link>
                               </td>
@@ -613,7 +616,7 @@ function DashboardData() {
                                 {/* <!--end::Avatar--> */}
                                 {/* <!--begin::User details--> */}
                                 <div className="d-flex flex-column">
-                                  <Link to="#">
+                                  <Link to="../builderprojectdetails/">
                                     <div className="fs-3 text-dark">Federal Construction</div>
                                     <div className="fs-6 text-muted fw-bold">BTG-2356</div>
                                   </Link>
@@ -629,7 +632,7 @@ function DashboardData() {
                                 <span className="badge badge-light-success">Accepted</span>
                               </td>
                               <td className="text-end">
-                                <Link to="#" className="btn btn-sm btn-icon btn-bg-light btn-active-color-primary" data-bs-toggle="tooltip" data-bs-trigger="hover" title="Project Details">
+                                <Link to="../builderprojectdetails/" className="btn btn-sm btn-icon btn-bg-light btn-active-color-primary" data-bs-toggle="tooltip" data-bs-trigger="hover" title="Project Details">
                                   <i className="ki-outline ki-arrow-right fs-2"></i>
                                 </Link>
                               </td>
@@ -645,7 +648,7 @@ function DashboardData() {
                                 {/* <!--end::Avatar--> */}
                                 {/* <!--begin::User details--> */}
                                 <div className="d-flex flex-column">
-                                  <Link to="#">
+                                  <Link to="../builderprojectdetails/">
                                     <div className="fs-3 text-dark">Commercial Outlook</div>
                                     <div className="fs-6 text-muted fw-bold">BTG-2356</div>
                                   </Link>
@@ -661,7 +664,7 @@ function DashboardData() {
                                 <span className="badge badge-light-danger">Rejected</span>
                               </td>
                               <td className="text-end">
-                                <Link to="#" className="btn btn-sm btn-icon btn-bg-light btn-active-color-primary" data-bs-toggle="tooltip" data-bs-trigger="hover" title="Project Details">
+                                <Link to="../builderprojectdetails/" className="btn btn-sm btn-icon btn-bg-light btn-active-color-primary" data-bs-toggle="tooltip" data-bs-trigger="hover" title="Project Details">
                                   <i className="ki-outline ki-arrow-right fs-2"></i>
                                 </Link>
                               </td>
@@ -677,7 +680,7 @@ function DashboardData() {
                                 {/* <!--end::Avatar--> */}
                                 {/* <!--begin::User details--> */}
                                 <div className="d-flex flex-column">
-                                  <Link to="#">
+                                  <Link to="../builderprojectdetails/">
                                     <div className="fs-3 text-dark">State Construction Project</div>
                                     <div className="fs-6 text-muted fw-bold">BTG-2356</div>
                                   </Link>
@@ -690,10 +693,10 @@ function DashboardData() {
                                 </Link>
                               </td>
                               <td className="text-end">
-                                <Link to="#" className="btn btnButton">Bid</Link>
+                                <Link to="../builderaddbid/" className="btn btnButton">Bid</Link>
                               </td>
                               <td className="text-end">
-                                <Link to="#" className="btn btn-sm btn-icon btn-bg-light btn-active-color-primary" data-bs-toggle="tooltip" data-bs-trigger="hover" title="Project Details">
+                                <Link to="../builderprojectdetails/" className="btn btn-sm btn-icon btn-bg-light btn-active-color-primary" data-bs-toggle="tooltip" data-bs-trigger="hover" title="Project Details">
                                   <i className="ki-outline ki-arrow-right fs-2"></i>
                                 </Link>
                               </td>
@@ -709,7 +712,7 @@ function DashboardData() {
                                 {/* <!--end::Avatar--> */}
                                 {/* <!--begin::User details--> */}
                                 <div className="d-flex flex-column">
-                                  <Link to="#">
+                                  <Link to="../builderprojectdetails/">
                                     <div className="fs-3 text-dark">Residential Building</div>
                                     <div className="fs-6 text-muted fw-bold">BTG-2356</div>
                                   </Link>
@@ -725,7 +728,7 @@ function DashboardData() {
                                 <span className="badge badge-light-primary">Invited</span>
                               </td>
                               <td className="text-end">
-                                <Link to="#" className="btn btn-sm btn-icon btn-bg-light btn-active-color-primary" data-bs-toggle="tooltip" data-bs-trigger="hover" title="Project Details">
+                                <Link to="../builderprojectdetails/" className="btn btn-sm btn-icon btn-bg-light btn-active-color-primary" data-bs-toggle="tooltip" data-bs-trigger="hover" title="Project Details">
                                   <i className="ki-outline ki-arrow-right fs-2"></i>
                                 </Link>
                               </td>
@@ -741,7 +744,7 @@ function DashboardData() {
                                 {/* <!--end::Avatar--> */}
                                 {/* <!--begin::User details--> */}
                                 <div className="d-flex flex-column">
-                                  <Link to="#">
+                                  <Link to="../builderprojectdetails/">
                                     <div className="fs-3 text-dark">Federal Construction</div>
                                     <div className="fs-6 text-muted fw-bold">BTG-2356</div>
                                   </Link>
@@ -754,10 +757,10 @@ function DashboardData() {
                                 </Link>
                               </td>
                               <td className="text-end">
-                                <Link to="#" className="btn btnButton">Bid</Link>
+                                <Link to="../builderaddbid/" className="btn btnButton">Bid</Link>
                               </td>
                               <td className="text-end">
-                                <Link to="#" className="btn btn-sm btn-icon btn-bg-light btn-active-color-primary" data-bs-toggle="tooltip" data-bs-trigger="hover" title="Project Details">
+                                <Link to="../builderprojectdetails/" className="btn btn-sm btn-icon btn-bg-light btn-active-color-primary" data-bs-toggle="tooltip" data-bs-trigger="hover" title="Project Details">
                                   <i className="ki-outline ki-arrow-right fs-2"></i>
                                 </Link>
                               </td>
@@ -773,7 +776,7 @@ function DashboardData() {
                                 {/* <!--end::Avatar--> */}
                                 {/* <!--begin::User details--> */}
                                 <div className="d-flex flex-column">
-                                  <Link to="#">
+                                  <Link to="../builderprojectdetails/">
                                     <div className="fs-3 text-dark">Commercial Outlook</div>
                                     <div className="fs-6 text-muted fw-bold">BTG-2356</div>
                                   </Link>
@@ -786,10 +789,10 @@ function DashboardData() {
                                 </Link>
                               </td>
                               <td className="text-end">
-                                <Link to="#" className="btn btnButton">Bid</Link>
+                                <Link to="../builderaddbid/" className="btn btnButton">Bid</Link>
                               </td>
                               <td className="text-end">
-                                <Link to="#" className="btn btn-sm btn-icon btn-bg-light btn-active-color-primary" data-bs-toggle="tooltip" data-bs-trigger="hover" title="Project Details">
+                                <Link to="../builderprojectdetails/" className="btn btn-sm btn-icon btn-bg-light btn-active-color-primary" data-bs-toggle="tooltip" data-bs-trigger="hover" title="Project Details">
                                   <i className="ki-outline ki-arrow-right fs-2"></i>
                                 </Link>
                               </td>
@@ -805,7 +808,7 @@ function DashboardData() {
                                 {/* <!--end::Avatar--> */}
                                 {/* <!--begin::User details--> */}
                                 <div className="d-flex flex-column">
-                                  <Link to="#">
+                                  <Link to="../builderprojectdetails/">
                                     <div className="fs-3 text-dark">State Construction Project</div>
                                     <div className="fs-6 text-muted fw-bold">BTG-2356</div>
                                   </Link>
@@ -818,10 +821,10 @@ function DashboardData() {
                                 </Link>
                               </td>
                               <td className="text-end">
-                                <Link to="#" className="btn btnButton">Bid</Link>
+                                <Link to="../builderaddbid/" className="btn btnButton">Bid</Link>
                               </td>
                               <td className="text-end">
-                                <Link to="#" className="btn btn-sm btn-icon btn-bg-light btn-active-color-primary" data-bs-toggle="tooltip" data-bs-trigger="hover" title="Project Details">
+                                <Link to="../builderprojectdetails/" className="btn btn-sm btn-icon btn-bg-light btn-active-color-primary" data-bs-toggle="tooltip" data-bs-trigger="hover" title="Project Details">
                                   <i className="ki-outline ki-arrow-right fs-2"></i>
                                 </Link>
                               </td>
@@ -862,7 +865,7 @@ function DashboardData() {
                                 {/* <!--end::Avatar--> */}
                                 {/* <!--begin::User details--> */}
                                 <div className="d-flex flex-column">
-                                  <Link to="#">
+                                  <Link to="../builderprojectdetails/">
                                     <div className="fs-3 text-dark">Home Renovation</div>
                                     <div className="fs-6 text-muted fw-bold">BTG-2356</div>
                                   </Link>
@@ -875,10 +878,10 @@ function DashboardData() {
                                 </Link>
                               </td>
                               <td className="text-end">
-                                <Link to="#" className="btn btnButton">Bid</Link>
+                                <Link to="../builderaddbid/" className="btn btnButton">Bid</Link>
                               </td>
                               <td className="text-end">
-                                <Link to="#" className="btn btn-sm btn-icon btn-bg-light btn-active-color-primary" data-bs-toggle="tooltip" data-bs-trigger="hover" title="Project Details">
+                                <Link to="../builderprojectdetails/" className="btn btn-sm btn-icon btn-bg-light btn-active-color-primary" data-bs-toggle="tooltip" data-bs-trigger="hover" title="Project Details">
                                   <i className="ki-outline ki-arrow-right fs-2"></i>
                                 </Link>
                               </td>
@@ -894,7 +897,7 @@ function DashboardData() {
                                 {/* <!--end::Avatar--> */}
                                 {/* <!--begin::User details--> */}
                                 <div className="d-flex flex-column">
-                                  <Link to="#">
+                                  <Link to="../builderprojectdetails/">
                                     <div className="fs-3 text-dark">Residential Building</div>
                                     <div className="fs-6 text-muted fw-bold">BTG-2356</div>
                                   </Link>
@@ -907,10 +910,10 @@ function DashboardData() {
                                 </Link>
                               </td>
                               <td className="text-end">
-                                <Link to="#" className="btn btnButton">Bid</Link>
+                                <Link to="../builderaddbid/" className="btn btnButton">Bid</Link>
                               </td>
                               <td className="text-end">
-                                <Link to="#" className="btn btn-sm btn-icon btn-bg-light btn-active-color-primary" data-bs-toggle="tooltip" data-bs-trigger="hover" title="Project Details">
+                                <Link to="../builderprojectdetails/" className="btn btn-sm btn-icon btn-bg-light btn-active-color-primary" data-bs-toggle="tooltip" data-bs-trigger="hover" title="Project Details">
                                   <i className="ki-outline ki-arrow-right fs-2"></i>
                                 </Link>
                               </td>
@@ -926,7 +929,7 @@ function DashboardData() {
                                 {/* <!--end::Avatar--> */}
                                 {/* <!--begin::User details--> */}
                                 <div className="d-flex flex-column">
-                                  <Link to="#">
+                                  <Link to="../builderprojectdetails/">
                                     <div className="fs-3 text-dark">Federal Construction</div>
                                     <div className="fs-6 text-muted fw-bold">BTG-2356</div>
                                   </Link>
@@ -939,10 +942,10 @@ function DashboardData() {
                                 </Link>
                               </td>
                               <td className="text-end">
-                                <Link to="#" className="btn btnButton">Bid</Link>
+                                <Link to="../builderaddbid/" className="btn btnButton">Bid</Link>
                               </td>
                               <td className="text-end">
-                                <Link to="#" className="btn btn-sm btn-icon btn-bg-light btn-active-color-primary" data-bs-toggle="tooltip" data-bs-trigger="hover" title="Project Details">
+                                <Link to="../builderprojectdetails/" className="btn btn-sm btn-icon btn-bg-light btn-active-color-primary" data-bs-toggle="tooltip" data-bs-trigger="hover" title="Project Details">
                                   <i className="ki-outline ki-arrow-right fs-2"></i>
                                 </Link>
                               </td>
@@ -958,7 +961,7 @@ function DashboardData() {
                                 {/* <!--end::Avatar--> */}
                                 {/* <!--begin::User details--> */}
                                 <div className="d-flex flex-column">
-                                  <Link to="#">
+                                  <Link to="../builderprojectdetails/">
                                     <div className="fs-3 text-dark">Commercial Outlook</div>
                                     <div className="fs-6 text-muted fw-bold">BTG-2356</div>
                                   </Link>
@@ -971,10 +974,10 @@ function DashboardData() {
                                 </Link>
                               </td>
                               <td className="text-end">
-                                <Link to="#" className="btn btnButton">Bid</Link>
+                                <Link to="../builderaddbid/" className="btn btnButton">Bid</Link>
                               </td>
                               <td className="text-end">
-                                <Link to="#" className="btn btn-sm btn-icon btn-bg-light btn-active-color-primary" data-bs-toggle="tooltip" data-bs-trigger="hover" title="Project Details">
+                                <Link to="../builderprojectdetails/" className="btn btn-sm btn-icon btn-bg-light btn-active-color-primary" data-bs-toggle="tooltip" data-bs-trigger="hover" title="Project Details">
                                   <i className="ki-outline ki-arrow-right fs-2"></i>
                                 </Link>
                               </td>
@@ -990,7 +993,7 @@ function DashboardData() {
                                 {/* <!--end::Avatar--> */}
                                 {/* <!--begin::User details--> */}
                                 <div className="d-flex flex-column">
-                                  <Link to="#">
+                                  <Link to="../builderprojectdetails/">
                                     <div className="fs-3 text-dark">Home Renovation</div>
                                     <div className="fs-6 text-muted fw-bold">BTG-2356</div>
                                   </Link>
@@ -1003,10 +1006,10 @@ function DashboardData() {
                                 </Link>
                               </td>
                               <td className="text-end">
-                                <Link to="#" className="btn btnButton">Bid</Link>
+                                <Link to="../builderaddbid/" className="btn btnButton">Bid</Link>
                               </td>
                               <td className="text-end">
-                                <Link to="#" className="btn btn-sm btn-icon btn-bg-light btn-active-color-primary" data-bs-toggle="tooltip" data-bs-trigger="hover" title="Project Details">
+                                <Link to="../builderprojectdetails/" className="btn btn-sm btn-icon btn-bg-light btn-active-color-primary" data-bs-toggle="tooltip" data-bs-trigger="hover" title="Project Details">
                                   <i className="ki-outline ki-arrow-right fs-2"></i>
                                 </Link>
                               </td>
@@ -1022,7 +1025,7 @@ function DashboardData() {
                                 {/* <!--end::Avatar--> */}
                                 {/* <!--begin::User details--> */}
                                 <div className="d-flex flex-column">
-                                  <Link to="#">
+                                  <Link to="../builderprojectdetails/">
                                     <div className="fs-3 text-dark">Residential Building</div>
                                     <div className="fs-6 text-muted fw-bold">BTG-2356</div>
                                   </Link>
@@ -1035,10 +1038,10 @@ function DashboardData() {
                                 </Link>
                               </td>
                               <td className="text-end">
-                                <Link to="#" className="btn btnButton">Bid</Link>
+                                <Link to="../builderaddbid/" className="btn btnButton">Bid</Link>
                               </td>
                               <td className="text-end">
-                                <Link to="#" className="btn btn-sm btn-icon btn-bg-light btn-active-color-primary" data-bs-toggle="tooltip" data-bs-trigger="hover" title="Project Details">
+                                <Link to="../builderprojectdetails/" className="btn btn-sm btn-icon btn-bg-light btn-active-color-primary" data-bs-toggle="tooltip" data-bs-trigger="hover" title="Project Details">
                                   <i className="ki-outline ki-arrow-right fs-2"></i>
                                 </Link>
                               </td>
@@ -1078,7 +1081,7 @@ function DashboardData() {
                                 {/* <!--end::Avatar--> */}
                                 {/* <!--begin::User details--> */}
                                 <div className="d-flex flex-column">
-                                  <Link to="#">
+                                  <Link to="../builderprojectdetails/">
                                     <div className="fs-3 text-dark">Home Renovation</div>
                                     <div className="fs-6 text-muted fw-bold">BTG-2356</div>
                                   </Link>
@@ -1094,7 +1097,7 @@ function DashboardData() {
                                 <span className="badge badge-light-success">Accepted</span>
                               </td>
                               <td className="text-end">
-                                <Link to="#" className="btn btn-sm btn-icon btn-bg-light btn-active-color-primary" data-bs-toggle="tooltip" data-bs-trigger="hover" title="Project Details">
+                                <Link to="../builderprojectdetails/" className="btn btn-sm btn-icon btn-bg-light btn-active-color-primary" data-bs-toggle="tooltip" data-bs-trigger="hover" title="Project Details">
                                   <i className="ki-outline ki-arrow-right fs-2"></i>
                                 </Link>
                               </td>
@@ -1110,7 +1113,7 @@ function DashboardData() {
                                 {/* <!--end::Avatar--> */}
                                 {/* <!--begin::User details--> */}
                                 <div className="d-flex flex-column">
-                                  <Link to="#">
+                                  <Link to="../builderprojectdetails/">
                                     <div className="fs-3 text-dark">Residential Building</div>
                                     <div className="fs-6 text-muted fw-bold">BTG-2356</div>
                                   </Link>
@@ -1126,7 +1129,7 @@ function DashboardData() {
                                 <span className="badge badge-light-success">Accepted</span>
                               </td>
                               <td className="text-end">
-                                <Link to="#" className="btn btn-sm btn-icon btn-bg-light btn-active-color-primary" data-bs-toggle="tooltip" data-bs-trigger="hover" title="Project Details">
+                                <Link to="../builderprojectdetails/" className="btn btn-sm btn-icon btn-bg-light btn-active-color-primary" data-bs-toggle="tooltip" data-bs-trigger="hover" title="Project Details">
                                   <i className="ki-outline ki-arrow-right fs-2"></i>
                                 </Link>
                               </td>
@@ -1142,7 +1145,7 @@ function DashboardData() {
                                 {/* <!--end::Avatar--> */}
                                 {/* <!--begin::User details--> */}
                                 <div className="d-flex flex-column">
-                                  <Link to="#">
+                                  <Link to="../builderprojectdetails/">
                                     <div className="fs-3 text-dark">Federal Construction</div>
                                     <div className="fs-6 text-muted fw-bold">BTG-2356</div>
                                   </Link>
@@ -1158,7 +1161,7 @@ function DashboardData() {
                                 <span className="badge badge-light-success">Accepted</span>
                               </td>
                               <td className="text-end">
-                                <Link to="#" className="btn btn-sm btn-icon btn-bg-light btn-active-color-primary" data-bs-toggle="tooltip" data-bs-trigger="hover" title="Project Details">
+                                <Link to="../builderprojectdetails/" className="btn btn-sm btn-icon btn-bg-light btn-active-color-primary" data-bs-toggle="tooltip" data-bs-trigger="hover" title="Project Details">
                                   <i className="ki-outline ki-arrow-right fs-2"></i>
                                 </Link>
                               </td>
@@ -1174,7 +1177,7 @@ function DashboardData() {
                                 {/* <!--end::Avatar--> */}
                                 {/* <!--begin::User details--> */}
                                 <div className="d-flex flex-column">
-                                  <Link to="#">
+                                  <Link to="../builderprojectdetails/">
                                     <div className="fs-3 text-dark">Commercial Outlook</div>
                                     <div className="fs-6 text-muted fw-bold">BTG-2356</div>
                                   </Link>
@@ -1190,7 +1193,7 @@ function DashboardData() {
                                 <span className="badge badge-light-success">Accepted</span>
                               </td>
                               <td className="text-end">
-                                <Link to="#" className="btn btn-sm btn-icon btn-bg-light btn-active-color-primary" data-bs-toggle="tooltip" data-bs-trigger="hover" title="Project Details">
+                                <Link to="../builderprojectdetails/" className="btn btn-sm btn-icon btn-bg-light btn-active-color-primary" data-bs-toggle="tooltip" data-bs-trigger="hover" title="Project Details">
                                   <i className="ki-outline ki-arrow-right fs-2"></i>
                                 </Link>
                               </td>
@@ -1206,7 +1209,7 @@ function DashboardData() {
                                 {/* <!--end::Avatar--> */}
                                 {/* <!--begin::User details--> */}
                                 <div className="d-flex flex-column">
-                                  <Link to="#">
+                                  <Link to="../builderprojectdetails/">
                                     <div className="fs-3 text-dark">State Construction Project</div>
                                     <div className="fs-6 text-muted fw-bold">BTG-2356</div>
                                   </Link>
@@ -1222,7 +1225,7 @@ function DashboardData() {
                                 <span className="badge badge-light-success">Accepted</span>
                               </td>
                               <td className="text-end">
-                                <Link to="#" className="btn btn-sm btn-icon btn-bg-light btn-active-color-primary" data-bs-toggle="tooltip" data-bs-trigger="hover" title="Project Details">
+                                <Link to="../builderprojectdetails/" className="btn btn-sm btn-icon btn-bg-light btn-active-color-primary" data-bs-toggle="tooltip" data-bs-trigger="hover" title="Project Details">
                                   <i className="ki-outline ki-arrow-right fs-2"></i>
                                 </Link>
                               </td>
@@ -1238,7 +1241,7 @@ function DashboardData() {
                                 {/* <!--end::Avatar--> */}
                                 {/* <!--begin::User details--> */}
                                 <div className="d-flex flex-column">
-                                  <Link to="#">
+                                  <Link to="../builderprojectdetails/">
                                     <div className="fs-3 text-dark">Residential Building</div>
                                     <div className="fs-6 text-muted fw-bold">BTG-2356</div>
                                   </Link>
@@ -1254,7 +1257,7 @@ function DashboardData() {
                                 <span className="badge badge-light-success">Accepted</span>
                               </td>
                               <td className="text-end">
-                                <Link to="#" className="btn btn-sm btn-icon btn-bg-light btn-active-color-primary" data-bs-toggle="tooltip" data-bs-trigger="hover" title="Project Details">
+                                <Link to="../builderprojectdetails/" className="btn btn-sm btn-icon btn-bg-light btn-active-color-primary" data-bs-toggle="tooltip" data-bs-trigger="hover" title="Project Details">
                                   <i className="ki-outline ki-arrow-right fs-2"></i>
                                 </Link>
                               </td>
@@ -1270,7 +1273,7 @@ function DashboardData() {
                                 {/* <!--end::Avatar--> */}
                                 {/* <!--begin::User details--> */}
                                 <div className="d-flex flex-column">
-                                  <Link to="#">
+                                  <Link to="../builderprojectdetails/">
                                     <div className="fs-3 text-dark">Federal Construction</div>
                                     <div className="fs-6 text-muted fw-bold">BTG-2356</div>
                                   </Link>
@@ -1286,7 +1289,7 @@ function DashboardData() {
                                 <span className="badge badge-light-success">Accepted</span>
                               </td>
                               <td className="text-end">
-                                <Link to="#" className="btn btn-sm btn-icon btn-bg-light btn-active-color-primary" data-bs-toggle="tooltip" data-bs-trigger="hover" title="Project Details">
+                                <Link to="../builderprojectdetails/" className="btn btn-sm btn-icon btn-bg-light btn-active-color-primary" data-bs-toggle="tooltip" data-bs-trigger="hover" title="Project Details">
                                   <i className="ki-outline ki-arrow-right fs-2"></i>
                                 </Link>
                               </td>
@@ -1302,7 +1305,7 @@ function DashboardData() {
                                 {/* <!--end::Avatar--> */}
                                 {/* <!--begin::User details--> */}
                                 <div className="d-flex flex-column">
-                                  <Link to="#">
+                                  <Link to="../builderprojectdetails/">
                                     <div className="fs-3 text-dark">Commercial Outlook</div>
                                     <div className="fs-6 text-muted fw-bold">BTG-2356</div>
                                   </Link>
@@ -1318,7 +1321,7 @@ function DashboardData() {
                                 <span className="badge badge-light-success">Accepted</span>
                               </td>
                               <td className="text-end">
-                                <Link to="#" className="btn btn-sm btn-icon btn-bg-light btn-active-color-primary" data-bs-toggle="tooltip" data-bs-trigger="hover" title="Project Details">
+                                <Link to="../builderprojectdetails/" className="btn btn-sm btn-icon btn-bg-light btn-active-color-primary" data-bs-toggle="tooltip" data-bs-trigger="hover" title="Project Details">
                                   <i className="ki-outline ki-arrow-right fs-2"></i>
                                 </Link>
                               </td>
@@ -1334,7 +1337,7 @@ function DashboardData() {
                                 {/* <!--end::Avatar--> */}
                                 {/* <!--begin::User details--> */}
                                 <div className="d-flex flex-column">
-                                  <Link to="#">
+                                  <Link to="../builderprojectdetails/">
                                     <div className="fs-3 text-dark">State Construction Project</div>
                                     <div className="fs-6 text-muted fw-bold">BTG-2356</div>
                                   </Link>
@@ -1350,7 +1353,7 @@ function DashboardData() {
                                 <span className="badge badge-light-success">Accepted</span>
                               </td>
                               <td className="text-end">
-                                <Link to="#" className="btn btn-sm btn-icon btn-bg-light btn-active-color-primary" data-bs-toggle="tooltip" data-bs-trigger="hover" title="Project Details">
+                                <Link to="../builderprojectdetails/" className="btn btn-sm btn-icon btn-bg-light btn-active-color-primary" data-bs-toggle="tooltip" data-bs-trigger="hover" title="Project Details">
                                   <i className="ki-outline ki-arrow-right fs-2"></i>
                                 </Link>
                               </td>
@@ -1390,7 +1393,7 @@ function DashboardData() {
                                 {/* <!--end::Avatar--> */}
                                 {/* <!--begin::User details--> */}
                                 <div className="d-flex flex-column">
-                                  <Link to="#">
+                                  <Link to="../builderprojectdetails/">
                                     <div className="fs-3 text-dark">Home Renovation</div>
                                     <div className="fs-6 text-muted fw-bold">BTG-2356</div>
                                   </Link>
@@ -1406,7 +1409,7 @@ function DashboardData() {
                                 <span className="badge badge-light-danger">Rejected</span>
                               </td>
                               <td className="text-end">
-                                <Link to="#" className="btn btn-sm btn-icon btn-bg-light btn-active-color-primary" data-bs-toggle="tooltip" data-bs-trigger="hover" title="Project Details">
+                                <Link to="../builderprojectdetails/" className="btn btn-sm btn-icon btn-bg-light btn-active-color-primary" data-bs-toggle="tooltip" data-bs-trigger="hover" title="Project Details">
                                   <i className="ki-outline ki-arrow-right fs-2"></i>
                                 </Link>
                               </td>
@@ -1422,7 +1425,7 @@ function DashboardData() {
                                 {/* <!--end::Avatar--> */}
                                 {/* <!--begin::User details--> */}
                                 <div className="d-flex flex-column">
-                                  <Link to="#">
+                                  <Link to="../builderprojectdetails/">
                                     <div className="fs-3 text-dark">Residential Building</div>
                                     <div className="fs-6 text-muted fw-bold">BTG-2356</div>
                                   </Link>
@@ -1438,7 +1441,7 @@ function DashboardData() {
                                 <span className="badge badge-light-danger">Rejected</span>
                               </td>
                               <td className="text-end">
-                                <Link to="#" className="btn btn-sm btn-icon btn-bg-light btn-active-color-primary" data-bs-toggle="tooltip" data-bs-trigger="hover" title="Project Details">
+                                <Link to="../builderprojectdetails/" className="btn btn-sm btn-icon btn-bg-light btn-active-color-primary" data-bs-toggle="tooltip" data-bs-trigger="hover" title="Project Details">
                                   <i className="ki-outline ki-arrow-right fs-2"></i>
                                 </Link>
                               </td>
@@ -1454,7 +1457,7 @@ function DashboardData() {
                                 {/* <!--end::Avatar--> */}
                                 {/* <!--begin::User details--> */}
                                 <div className="d-flex flex-column">
-                                  <Link to="#">
+                                  <Link to="../builderprojectdetails/">
                                     <div className="fs-3 text-dark">Federal Construction</div>
                                     <div className="fs-6 text-muted fw-bold">BTG-2356</div>
                                   </Link>
@@ -1470,7 +1473,7 @@ function DashboardData() {
                                 <span className="badge badge-light-danger">Rejected</span>
                               </td>
                               <td className="text-end">
-                                <Link to="#" className="btn btn-sm btn-icon btn-bg-light btn-active-color-primary" data-bs-toggle="tooltip" data-bs-trigger="hover" title="Project Details">
+                                <Link to="../builderprojectdetails/" className="btn btn-sm btn-icon btn-bg-light btn-active-color-primary" data-bs-toggle="tooltip" data-bs-trigger="hover" title="Project Details">
                                   <i className="ki-outline ki-arrow-right fs-2"></i>
                                 </Link>
                               </td>
@@ -1486,7 +1489,7 @@ function DashboardData() {
                                 {/* <!--end::Avatar--> */}
                                 {/* <!--begin::User details--> */}
                                 <div className="d-flex flex-column">
-                                  <Link to="#">
+                                  <Link to="../builderprojectdetails/">
                                     <div className="fs-3 text-dark">Commercial Outlook</div>
                                     <div className="fs-6 text-muted fw-bold">BTG-2356</div>
                                   </Link>
@@ -1502,7 +1505,7 @@ function DashboardData() {
                                 <span className="badge badge-light-danger">Rejected</span>
                               </td>
                               <td className="text-end">
-                                <Link to="#" className="btn btn-sm btn-icon btn-bg-light btn-active-color-primary" data-bs-toggle="tooltip" data-bs-trigger="hover" title="Project Details">
+                                <Link to="../builderprojectdetails/" className="btn btn-sm btn-icon btn-bg-light btn-active-color-primary" data-bs-toggle="tooltip" data-bs-trigger="hover" title="Project Details">
                                   <i className="ki-outline ki-arrow-right fs-2"></i>
                                 </Link>
                               </td>
@@ -1518,7 +1521,7 @@ function DashboardData() {
                                 {/* <!--end::Avatar--> */}
                                 {/* <!--begin::User details--> */}
                                 <div className="d-flex flex-column">
-                                  <Link to="#">
+                                  <Link to="../builderprojectdetails/">
                                     <div className="fs-3 text-dark">State Construction Project</div>
                                     <div className="fs-6 text-muted fw-bold">BTG-2356</div>
                                   </Link>
@@ -1534,7 +1537,7 @@ function DashboardData() {
                                 <span className="badge badge-light-danger">Rejected</span>
                               </td>
                               <td className="text-end">
-                                <Link to="#" className="btn btn-sm btn-icon btn-bg-light btn-active-color-primary" data-bs-toggle="tooltip" data-bs-trigger="hover" title="Project Details">
+                                <Link to="../builderprojectdetails/" className="btn btn-sm btn-icon btn-bg-light btn-active-color-primary" data-bs-toggle="tooltip" data-bs-trigger="hover" title="Project Details">
                                   <i className="ki-outline ki-arrow-right fs-2"></i>
                                 </Link>
                               </td>
@@ -1550,7 +1553,7 @@ function DashboardData() {
                                 {/* <!--end::Avatar--> */}
                                 {/* <!--begin::User details--> */}
                                 <div className="d-flex flex-column">
-                                  <Link to="#">
+                                  <Link to="../builderprojectdetails/">
                                     <div className="fs-3 text-dark">Residential Building</div>
                                     <div className="fs-6 text-muted fw-bold">BTG-2356</div>
                                   </Link>
@@ -1566,7 +1569,7 @@ function DashboardData() {
                                 <span className="badge badge-light-danger">Rejected</span>
                               </td>
                               <td className="text-end">
-                                <Link to="#" className="btn btn-sm btn-icon btn-bg-light btn-active-color-primary" data-bs-toggle="tooltip" data-bs-trigger="hover" title="Project Details">
+                                <Link to="../builderprojectdetails/" className="btn btn-sm btn-icon btn-bg-light btn-active-color-primary" data-bs-toggle="tooltip" data-bs-trigger="hover" title="Project Details">
                                   <i className="ki-outline ki-arrow-right fs-2"></i>
                                 </Link>
                               </td>
@@ -1582,7 +1585,7 @@ function DashboardData() {
                                 {/* <!--end::Avatar--> */}
                                 {/* <!--begin::User details--> */}
                                 <div className="d-flex flex-column">
-                                  <Link to="#">
+                                  <Link to="../builderprojectdetails/">
                                     <div className="fs-3 text-dark">Federal Construction</div>
                                     <div className="fs-6 text-muted fw-bold">BTG-2356</div>
                                   </Link>
@@ -1598,7 +1601,7 @@ function DashboardData() {
                                 <span className="badge badge-light-danger">Rejected</span>
                               </td>
                               <td className="text-end">
-                                <Link to="#" className="btn btn-sm btn-icon btn-bg-light btn-active-color-primary" data-bs-toggle="tooltip" data-bs-trigger="hover" title="Project Details">
+                                <Link to="../builderprojectdetails/" className="btn btn-sm btn-icon btn-bg-light btn-active-color-primary" data-bs-toggle="tooltip" data-bs-trigger="hover" title="Project Details">
                                   <i className="ki-outline ki-arrow-right fs-2"></i>
                                 </Link>
                               </td>
@@ -1614,7 +1617,7 @@ function DashboardData() {
                                 {/* <!--end::Avatar--> */}
                                 {/* <!--begin::User details--> */}
                                 <div className="d-flex flex-column">
-                                  <Link to="#">
+                                  <Link to="../builderprojectdetails/">
                                     <div className="fs-3 text-dark">Commercial Outlook</div>
                                     <div className="fs-6 text-muted fw-bold">BTG-2356</div>
                                   </Link>
@@ -1630,7 +1633,7 @@ function DashboardData() {
                                 <span className="badge badge-light-danger">Rejected</span>
                               </td>
                               <td className="text-end">
-                                <Link to="#" className="btn btn-sm btn-icon btn-bg-light btn-active-color-primary" data-bs-toggle="tooltip" data-bs-trigger="hover" title="Project Details">
+                                <Link to="../builderprojectdetails/" className="btn btn-sm btn-icon btn-bg-light btn-active-color-primary" data-bs-toggle="tooltip" data-bs-trigger="hover" title="Project Details">
                                   <i className="ki-outline ki-arrow-right fs-2"></i>
                                 </Link>
                               </td>
@@ -1646,7 +1649,7 @@ function DashboardData() {
                                 {/* <!--end::Avatar--> */}
                                 {/* <!--begin::User details--> */}
                                 <div className="d-flex flex-column">
-                                  <Link to="#">
+                                  <Link to="../builderprojectdetails/">
                                     <div className="fs-3 text-dark">State Construction Project</div>
                                     <div className="fs-6 text-muted fw-bold">BTG-2356</div>
                                   </Link>
@@ -1662,7 +1665,7 @@ function DashboardData() {
                                 <span className="badge badge-light-danger">Rejected</span>
                               </td>
                               <td className="text-end">
-                                <Link to="#" className="btn btn-sm btn-icon btn-bg-light btn-active-color-primary" data-bs-toggle="tooltip" data-bs-trigger="hover" title="Project Details">
+                                <Link to="../builderprojectdetails/" className="btn btn-sm btn-icon btn-bg-light btn-active-color-primary" data-bs-toggle="tooltip" data-bs-trigger="hover" title="Project Details">
                                   <i className="ki-outline ki-arrow-right fs-2"></i>
                                 </Link>
                               </td>
@@ -1715,7 +1718,7 @@ function DashboardData() {
                                 {/* <!--end::Avatar--> */}
                                 {/* <!--begin::User details--> */}
                                 <div className="d-flex flex-column">
-                                  <Link to="#">
+                                  <Link to="../builderprojectdetails/">
                                     <div className="fs-3 text-dark">Home Renovation</div>
                                     <div className="fs-6 text-muted fw-bold">BTG-2356</div>
                                   </Link>
@@ -1732,7 +1735,7 @@ function DashboardData() {
                               <td className="text-end">
                               </td>
                               <td className="text-end">
-                                <Link to="#" className="btn btnButton me-1" data-bs-toggle="tooltip" data-bs-trigger="hover" title="Edit Bid">Edit</Link>
+                                <Link to="../builderaddbid/" className="btn btnButton me-1" data-bs-toggle="tooltip" data-bs-trigger="hover" title="Edit Bid">Edit</Link>
                                 <Link to="#" className="btn btnButton" data-bs-toggle="tooltip" data-bs-trigger="hover" title="Retract Bid">Retract Bid</Link>
                               </td>
                             </tr>
@@ -1747,7 +1750,7 @@ function DashboardData() {
                                 {/* <!--end::Avatar--> */}
                                 {/* <!--begin::User details--> */}
                                 <div className="d-flex flex-column">
-                                  <Link to="#">
+                                  <Link to="../builderprojectdetails/">
                                     <div className="fs-3 text-dark">Residential Building</div>
                                     <div className="fs-6 text-muted fw-bold">BTG-2356</div>
                                   </Link>
@@ -1764,7 +1767,7 @@ function DashboardData() {
                               <td className="text-end">
                               </td>
                               <td className="text-end">
-                                <Link to="#" className="btn btnButton me-1" data-bs-toggle="tooltip" data-bs-trigger="hover" title="Edit Bid">Edit</Link>
+                                <Link to="../builderaddbid/" className="btn btnButton me-1" data-bs-toggle="tooltip" data-bs-trigger="hover" title="Edit Bid">Edit</Link>
                                 <Link to="#" className="btn btnButton" data-bs-toggle="tooltip" data-bs-trigger="hover" title="Retract Bid">Retract Bid</Link>
                               </td>
                             </tr>
@@ -1779,7 +1782,7 @@ function DashboardData() {
                                 {/* <!--end::Avatar--> */}
                                 {/* <!--begin::User details--> */}
                                 <div className="d-flex flex-column">
-                                  <Link to="#">
+                                  <Link to="../builderprojectdetails/">
                                     <div className="fs-3 text-dark">Federal Construction</div>
                                     <div className="fs-6 text-muted fw-bold">BTG-2356</div>
                                   </Link>
@@ -1796,7 +1799,7 @@ function DashboardData() {
                               <td className="text-end">
                               </td>
                               <td className="text-end">
-                                <Link to="#" className="btn btnButton me-1" data-bs-toggle="tooltip" data-bs-trigger="hover" title="Edit Bid">Edit</Link>
+                                <Link to="../builderaddbid/" className="btn btnButton me-1" data-bs-toggle="tooltip" data-bs-trigger="hover" title="Edit Bid">Edit</Link>
                                 <Link to="#" className="btn btnButton" data-bs-toggle="tooltip" data-bs-trigger="hover" title="Retract Bid">Retract Bid</Link>
                               </td>
                             </tr>

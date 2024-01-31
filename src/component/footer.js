@@ -5,6 +5,8 @@ import { Link } from "react-router-dom";
 
 
 export default function Login() {
+    var year = new Date().getFullYear();
+    
     // document.title = 'Buildify AI | Login'
     return (
         <>
@@ -12,7 +14,7 @@ export default function Login() {
             <div id="kt_app_footer" className="app-footer d-flex flex-column flex-md-row align-items-center flex-center flex-md-stack py-2 py-lg-4">
                 {/* <!--begin::Copyright--> */}
                 <div className="text-dark order-2 order-md-1">
-                    <span className="text-muted fw-semibold me-1">2023&copy;</span>
+                    <span className="text-muted fw-semibold me-1">{year}&copy;</span>
                     <Link to="/" className="text-gray-800 text-hover-primary">Buildify AI</Link>
                 </div>
                 {/* <!--end::Copyright--> */}

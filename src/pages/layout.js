@@ -16,7 +16,7 @@ function Layout({ data }) {
                     {/* <!--begin::Wrapper--> */}
                     <div className="app-wrapper flex-column flex-row-fluid" id="kt_app_wrapper">
                         {/* <!--begin::Toolbar--> */}
-                        <div id="kt_app_toolbar" className="app-toolbar py-6">
+                        <div id="kt_app_toolbar" className="app-toolbar pt-6 pb-15">
                             {/* <!--begin::Toolbar container--> */}
                             <div id="kt_app_toolbar_container" className="app-container container-xxl d-flex align-items-start">
                                 {/* <!--begin::Toolbar container--> */}
@@ -27,18 +27,18 @@ function Layout({ data }) {
                                         <ul className="breadcrumb breadcrumb-separatorless fw-semibold">
                                             {/* <!--begin::Item--> */}
                                             <li className="breadcrumb-item text-white fw-bold lh-1">
-                                                <Link to={accountType == "OWNER" ? `../ownerdashboard/` : accountType == "BUILDER" ? '../builderdashboard/' : '../subcontractordashboard/'} style={{color: '#5E6278'}}>
+                                                <Link to={accountType == "OWNER" ? `../ownerdashboard/` : accountType == "BUILDER" ? '../builderdashboard/' : '../subcontractordashboard/'} style={{ color: '#5E6278' }}>
                                                     <i className="ki-outline ki-home text-gray-700 fs-6"></i>
                                                 </Link>
                                             </li>
                                             {/* <!--end::Item--> */}
                                             {/* <!--begin::Item--> */}
-                                            <li className="breadcrumb-item" style={{color: '#5E6278'}}>
+                                            <li className="breadcrumb-item" style={{ color: '#5E6278' }}>
                                                 <i className="ki-outline ki-right fs-7 text-gray-700 mx-n1"></i>
                                             </li>
                                             {/* <!--end::Item--> */}
                                             {/* <!--begin::Item--> */}
-                                            <li className="breadcrumb-item fw-bold fs-4 lh-1" style={{ color: 'white' }}>Dashboard</li>
+                                            <li className="breadcrumb-item fw-bold fs-4 lh-1" style={{ color: 'white' }}>Dashboard </li>
                                             {/* <!--end::Item--> */}
                                         </ul>
                                         {/* <!--end::Breadcrumb--> */}
@@ -57,10 +57,9 @@ function Layout({ data }) {
                             {/* <!--begin::Content--> */}
                             {data}
                             {/* <!--end::Content--> */}
+                            <Footer />
                         </div>
                         {/* <!--end::Content wrapper--> */}
-                        {/* <!--begin::Footer--> */}
-                        <Footer />
                     </div>
                 </div>
             </div >

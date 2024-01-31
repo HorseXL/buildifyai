@@ -13,6 +13,8 @@ import { faEye, faEyeSlash } from '@fortawesome/free-solid-svg-icons';
 export default function Resetpassword() {
 	document.title = 'Buildify AI | Reset Password'
 
+	const [isloading, setIsloading] = useState(false);
+
 	useEffect(() => {
         window.scrollTo(0, 0); // Scroll to the top of the page
     }, []);
@@ -43,6 +45,7 @@ export default function Resetpassword() {
 
     const resetPasswordApi = async (value) => {
 
+		setIsloading(true);
         let data = { 
 			"password": value.password,		
 			"confirmPassword": value.confirmPassword
@@ -54,6 +57,7 @@ export default function Resetpassword() {
 			console.log(response.message);
             navigate("../login/");
         } else {
+			setIsloading(false);
             console.log(response);
 			toasterrormsg(response.message);
             
@@ -180,25 +184,15 @@ export default function Resetpassword() {
 										{/* <!--end::Wrapper--> */}
 									</div>
 									{/* <!--end::Input group=--> */}
-									{/* <!--begin::Input group=--> */}
-									<div className="fv-row mb-8">
-										<label className="form-check form-check-inline">
-											<input className="form-check-input" type="checkbox" name="toc" value="1" />
-											<span className="form-check-label fw-semibold text-gray-700 fs-6 ms-1">I Agree &
-											<Link to="/" className="ms-1 link-primary">Terms and conditions</Link>.</span>
-										</label>
-									</div>
-									{/* <!--end::Input group=--> */}
 									{/* <!--begin::Action--> */}
 									<div className="d-grid mb-10">
 										<button className="btn btnButton" type='submit'>
+											{isloading &&(
+												<span className="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+											)} 
 											{/* <!--begin::Indicator label--> */}
 											<span className="indicator-label">Submit</span>
 											{/* <!--end::Indicator label--> */}
-											{/* <!--begin::Indicator progress--> */}
-											<span className="indicator-progress">Please wait...
-											<span className="spinner-border spinner-border-sm align-middle ms-2"></span></span>
-											{/* <!--end::Indicator progress--> */}
 										</button>
 									</div>
 									{/* <!--end::Action--> */}

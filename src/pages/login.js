@@ -21,6 +21,7 @@ export default function Login() {
 
 	//   const [email,setEmail] = useState('');
 	//   const [password,setPassword] = useState('');
+	const [isloading, setIsloading] = useState(false);
 
 	const navigate = useNavigate();
 
@@ -40,10 +41,10 @@ export default function Login() {
 	// login api call
 	const signInApi = async (value) => {
 
+		setIsloading(true)
 		let data = {
 			"email": value.email,
-			"password": value.password,
-			"os":"WEB"
+			"password": value.password
 			};
 
 		var response = await fetchDataPrivate('post',"public/login",data);
@@ -53,19 +54,23 @@ export default function Login() {
 			window.localStorage.setItem('buildifyUserId',response.data[0].userId);
           	window.localStorage.setItem('email',response.data[0].email);
           	window.localStorage.setItem('accountType',response.data[0].accountType);
-			
+			window.localStorage.setItem('activeTab','dashboard');
+			window.localStorage.setItem('activeTabSub', '');
+			localStorage.setItem('activeTab', 'business');
+			localStorage.setItem('activeTabSub', 'Summary');
 			// check account type
 			if(response.data[0].accountType == "SUBCONTRACTOR"){
-				navigate("../subcontractordashboard/");
+				navigate("../buildersummary/");
 			}
 			else if(response.data[0].accountType == "BUILDER"){
 
-				navigate("../builderdashboard/");
+				navigate("../buildersummary/");
 			} 
 			else{
 				navigate("../ownerdashboard/");
 			}
 		}else{
+			setIsloading(false)
 			console.log(response);
 			toasterrormsg(response.message);
 		}
@@ -290,13 +295,13 @@ export default function Login() {
 									<!--begin::Submit button--> */}
 									<div className="d-grid mb-10">
 										<button className="form-control bg-primary" type='Submit' style={{color: 'white'}}>
+										{isloading &&(
+
+											<span className="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+										)}
 											{/* <!--begin::Indicator label--> */}
 											<span className="indicator-label">Sign In</span>
 											{/* <!--end::Indicator label--> */}
-											{/* <!--begin::Indicator progress--> */}
-											<span className="indicator-progress">Please wait...
-											<span className="spinner-border spinner-border-sm align-middle ms-2"></span></span>
-											{/* <!--end::Indicator progress--> */}
 										</button>
 									</div>
 									{/* <!--end::Submit button--> */}

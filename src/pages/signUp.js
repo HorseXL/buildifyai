@@ -1,4 +1,4 @@
-import React, { useState,useEffect, useRef } from 'react'
+import React, { useState, useRef } from 'react'
 import agencyimg from "../assets/images/agency.png"
 import googleimg from "../assets/images/google-icon.svg"
 import appleimg from "../assets/images/apple-black.svg"
@@ -6,8 +6,8 @@ import logo from "../assets/images/Logo.svg"
 import blank from "../assets/images/Avatar/blank.png"
 import "../assets/css/style.bundle.css"
 import {Link, useNavigate} from 'react-router-dom';
-import {fetchFormData,toasterrormsg,toastsuccessmsg,} from "../config/Reausable"
-import { ToastContainer, toast } from "react-toastify";
+import {fetchFormData,toasterrormsg,} from "../config/Reausable"
+import { ToastContainer, } from "react-toastify";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEye, faEyeSlash } from '@fortawesome/free-solid-svg-icons';
 
@@ -127,6 +127,7 @@ export default function SignUp() {
 				window.localStorage.setItem('buildifyUserId',response.data[0].userId);
 				navigate('../createaccount/');
 			} else {
+				setIsloading(false);
 				toasterrormsg(response.message);
 				console.log("Error uploading documents:", response);
 			}
@@ -215,7 +216,7 @@ export default function SignUp() {
 										<span className="w-125px text-gray-500 fw-semibold fs-7">Or with email</span>
 									</div>
 									{/* <!--end::Separator--> */}
-									{/* <!--begin::Input group=--> */}
+									{/* <!--begin::Input group--> */}
 									<div className="form w-100">
 										{/* <!--begin::Col--> */}
                                         <div className="col-lg-8 mb-8">
@@ -224,7 +225,7 @@ export default function SignUp() {
                                             <div className="image-input image-input-outline blankImg" data-kt-image-input="true">
                                                 {/* <!--begin::Preview existing avatar--> */}
                                                 <div className="image-input-wrapper w-125px h-125px avatar330-1" alt='profile' style={{backgroundImage:`url(${viewProfile != "" ? viewProfile : blank})`}}></div>
-                                                {/* <!--end::Preview existing avatar--> */}
+                                                {/* end::Preview existing avatar */}
 
                                                 {/* <!--begin::Label--> */}
                                                 <label className="btn btn-icon btn-circle btn-active-color-primary w-25px h-25px bg-body shadow" data-kt-image-input-action="change" data-bs-toggle="tooltip" title="Change avatar">
@@ -382,8 +383,7 @@ export default function SignUp() {
 									<div className="d-grid mb-10">
 										<button className="btn form-control btnButton" onClick={signUpApi}>
 											{isloading &&(
-
-										  	<span className="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+										  		<span className="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
 											)}
 										  <span className='mx-4'>Sign up</span>
 										</button>

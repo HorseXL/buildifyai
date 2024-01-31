@@ -1,6 +1,7 @@
 import axios from 'axios';
 import { toast } from 'react-toastify';
 import "react-toastify/dist/ReactToastify.css";
+import { Tooltip } from 'bootstrap'; 
 
 // import { useSelector } from "react-redux"
 // import { store } from "../Redux/store"
@@ -159,12 +160,11 @@ export const fetchDataPrivate = async (method,url, raw) => {
 
 export const URL =
 {
-    // uatUrl: 'https://api.gogagner.com/BF/',
-    uatUrl: 'https://us-central1-builidify-staging.cloudfunctions.net/gcp-func-buildify/BF/',
+    uatUrl: 'https://api.gogagner.com/BF/',
+    // uatUrl: 'https://us-central1-builidify-staging.cloudfunctions.net/gcp-func-buildify/BF/',
     xtoken: "",
     fcmToken: ""
 }
-
 
 export const channels =
 {
@@ -225,3 +225,29 @@ export function toastsuccessmsg(message) {
     theme: "dark",
   });
 }
+
+export var createBootstrapTooltips = function () {
+  var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
+
+  tooltipTriggerList.forEach(function (tooltipTriggerEl) {
+    var options = {
+      template: '<div class="tooltip" role="tooltip"><div class="tooltip-arrow"></div><div class="tooltip-inner shadow-lg"></div></div>'
+      // Customize the classes 'bg-primary' for background color and 'shadow-lg' for shadow
+    };
+
+    if (tooltipTriggerEl.hasAttribute('data-bs-dismiss') && tooltipTriggerEl.getAttribute('data-bs-dismiss') === 'click') {
+      options.dismiss = 'click';
+    }
+
+    new Tooltip(tooltipTriggerEl, options);
+
+    // Dismiss tooltip on click event
+    tooltipTriggerEl.addEventListener('click', function () {
+      var tooltip = Tooltip.getInstance(tooltipTriggerEl);
+      if (tooltip) {
+        tooltip.hide();
+      }
+    });
+  });
+};
+

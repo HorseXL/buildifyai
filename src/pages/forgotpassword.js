@@ -16,6 +16,7 @@ export default function Forgotpassword() {
 	  }, []);
 
 	//   const [email,setEmail] = useState('');
+	const [isloading, setIsloading] = useState(false);
 
 	  const navigate = useNavigate();
 
@@ -27,7 +28,7 @@ export default function Forgotpassword() {
 		
 	  // forgot password api call
 	  const forgotPasswordApi = async (value) => {
-		
+		setIsloading(true);
 		let data = {"email": value.email};
     
     	var response = await fetchData('post',"public/forgetPassword",data);
@@ -36,6 +37,7 @@ export default function Forgotpassword() {
 			navigate("../otpverification/");
 			console.log(response);
 		}else{
+			setIsloading(false);
 			console.log(response);
 			toasterrormsg(response.message);
 		}
@@ -112,13 +114,12 @@ export default function Forgotpassword() {
 									{/* <!--begin::Actions--> */}
 									<div className="d-flex flex-wrap justify-content-center pb-lg-0">
 										<button className="btn me-4 btnButton" type='submit'>
+											{isloading &&(
+												<span className="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+											)} 
 											{/* <!--begin::Indicator label--> */}
 											<span className="indicator-label">Submit</span>
 											{/* <!--end::Indicator label--> */}
-											{/* <!--begin::Indicator progress--> */}
-											<span className="indicator-progress">Please wait...
-											<span className="spinner-border spinner-border-sm align-middle ms-2"></span></span>
-											{/* <!--end::Indicator progress--> */}
 										</button>
 										<Link to="/login" className="btn btnButtonCancel">Cancel</Link>
 									</div>

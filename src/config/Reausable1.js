@@ -169,12 +169,11 @@ export const fetchDataPrivate = async (url, raw) => {
 
 export const URL =
 {
-    // uatUrl: 'https://api.gogagner.com/BF/',
-    uatUrl: 'https://us-central1-builidify-staging.cloudfunctions.net/gcp-func-buildify/BF/',
+    uatUrl: 'https://api.gogagner.com/BF/',
+    // prodUrl: 'https://dawnapplication.azurewebsites.net/HI/api/',
     xtoken: "",
     fcmToken: ""
 }
-
 
 export const channels =
 {

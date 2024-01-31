@@ -383,6 +383,7 @@ export default function Createaccount() {
 
         var response = await fetchDataPrivate('post',"api/verifyOTP", verifyOtp);
         if (response.status === 200) {
+            console.log(response);
             window.localStorage.setItem('accountType',response.data[0].accountType);
             
             const step1Content = document.querySelector('[data-kt-stepper-element="content"][check="step5"]');
@@ -769,7 +770,7 @@ export default function Createaccount() {
                     id="kt_create_account_stepper">
                     {/* <!--begin::Aside--> */}
                     <div className="d-flex flex-column flex-lg-row-auto w-lg-350px w-xl-500px">
-                        <div className="d-flex flex-column position-lg-fixed top-0 bottom-0 w-lg-350px w-xl-500px scroll-y bgi-size-cover bgi-position-center createaccoutn">
+                        <div className="d-flex flex-column position-lg-fixed top-0 bottom-0 w-lg-350px w-xl-500px createAccount_scroll_y bgi-size-cover bgi-position-center createaccoutn">
                             {/* <!--begin::Header--> */}
                             <div className="d-flex flex-center py-10 py-lg-20 mt-lg-20">
                                 {/* <!--begin::Logo--> */}
