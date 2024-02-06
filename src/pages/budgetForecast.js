@@ -68,10 +68,11 @@ function ViewBudgetForecast() {
 												</div>
 												{/* <!--end::Header--> */}
 												{/* <!--begin::Card body--> */}
-												<div className="card-body pt-5 mt-5 pb-4 d-flex flex-wrap align-items-center">
+												<div className="card-body pb-4 d-flex flex-wrap align-items-center">
 													{/* <!--begin::Chart--> */}
 													<div className="d-flex flex-center me-5 pt-2">
-														<div id="kt_card_widget_17_chart" style={{minWidth: "70px", minHeight: "70px"}} data-kt-size="70" data-kt-line="11"></div>
+														{/* <div id="kt_card_widget_17_chart" style={{minWidth: "70px", minHeight: "70px"}} data-kt-size="70" data-kt-line="11"></div> */}
+														<div className="mini-chart"><div className="rv-xy-plot  rv-radial-chart" style={{width: "120px", height: "120px"}}><svg className="rv-xy-plot__inner" width="120" height="120"><g className="rv-xy-plot__series rv-xy-plot__series--arc " opacity="1" pointer-events="all" transform="translate(60,60)"><path className="rv-xy-plot__series rv-xy-plot__series--arc-path rv-radial-chart__series--pie__slice " d="M-43.706588332443026,10.711402164906092A45,45,0,0,1,3.1701662992261e-14,-45L0,0Z" style={{opacity: "1", stroke: "rgb(30, 150, 190)", fill: "rgb(30, 150, 190)"}}></path><path className="rv-xy-plot__series rv-xy-plot__series--arc-path rv-radial-chart__series--pie__slice " d="M32.05834031456966,31.579468270938914A45,45,0,0,1,-43.706588332443026,10.711402164906092L0,0Z" style={{opacity: "1", stroke: "rgb(23, 184, 190)", fill: "rgb(23, 184, 190)"}}></path><path className="rv-xy-plot__series rv-xy-plot__series--arc-path rv-radial-chart__series--pie__slice " d="M2.7554552980815448e-15,-45A45,45,0,0,1,32.05834031456966,31.579468270938914L0,0Z" style={{opacity: "1", stroke: "lightgray", fill: "lightgray"}}></path></g></svg></div></div>
 													</div>
 													{/* <!--end::Chart--> */}
 													{/* <!--begin::Labels--> */}
@@ -88,9 +89,10 @@ function ViewBudgetForecast() {
 															<div className="fw-bolder text-gray-700 text-xxl-end">$7,660</div>
 															{/* <!--end::Stats--> */}
 														</div>
+														<div className="separator separator-solid my-3"></div>
 														{/* <!--end::Label--> */}
 														{/* <!--begin::Label--> */}
-														<div className="d-flex fw-semibold align-items-center my-3">
+														<div className="d-flex fw-semibold align-items-center">
 															{/* <!--begin::Bullet--> */}
 															<div className="bullet w-8px h-3px rounded-2 bg-primary me-3"></div>
 															{/* <!--end::Bullet--> */}
@@ -102,6 +104,7 @@ function ViewBudgetForecast() {
 															{/* <!--end::Stats--> */}
 														</div>
 														{/* <!--end::Label--> */}
+														<div className="separator separator-solid my-3"></div>
 														{/* <!--begin::Label--> */}
 														<div className="d-flex fw-semibold align-items-center">
 															{/* <!--begin::Bullet--> */}
@@ -152,7 +155,7 @@ function ViewBudgetForecast() {
 													{/* <!--begin::Item--> */}
 													<div className="d-flex flex-stack">
 														{/* <!--begin::Section--> */}
-														<div className="text-gray-700 fw-semibold fs-6 me-2">Avg. Client Rating</div>
+														<div className="text-gray-700 fw-semibold text-primary fs-6 me-2">Avg. Client Rating</div>
 														{/* <!--end::Section--> */}
 														{/* <!--begin::Statistics--> */}
 														<div className="d-flex align-items-senter">
@@ -166,12 +169,12 @@ function ViewBudgetForecast() {
 													</div>
 													{/* <!--end::Item--> */}
 													{/* <!--begin::Separator--> */}
-													<div className="separator separator-dashed my-3"></div>
+													<div className="separator separator-solid my-3"></div>
 													{/* <!--end::Separator--> */}
 													{/* <!--begin::Item--> */}
 													<div className="d-flex flex-stack">
 														{/* <!--begin::Section--> */}
-														<div className="text-gray-700 fw-semibold fs-6 me-2">Avg. Quotes</div>
+														<div className="text-gray-700 fw-semibold text-primary fs-6 me-2">Avg. Quotes</div>
 														{/* <!--end::Section--> */}
 														{/* <!--begin::Statistics--> */}
 														<div className="d-flex align-items-senter">
@@ -184,12 +187,12 @@ function ViewBudgetForecast() {
 													</div>
 													{/* <!--end::Item--> */}
 													{/* <!--begin::Separator--> */}
-													<div className="separator separator-dashed my-3"></div>
+													<div className="separator separator-solid my-3"></div>
 													{/* <!--end::Separator--> */}
 													{/* <!--begin::Item--> */}
 													<div className="d-flex flex-stack">
 														{/* <!--begin::Section--> */}
-														<div className="text-gray-700 fw-semibold fs-6 me-2">Avg. Agent Earnings</div>
+														<div className="text-gray-700 fw-semibold text-primary fs-6 me-2">Avg. Agent Earnings</div>
 														{/* <!--end::Section--> */}
 														{/* <!--begin::Statistics--> */}
 														<div className="d-flex align-items-senter">
@@ -201,58 +204,59 @@ function ViewBudgetForecast() {
 														{/* <!--end::Statistics--> */}
 													</div>
 													{/* <!--end::Item--> */}
+													
 												</div>
 												{/* <!--end::Body--> */}
 											</div>
 											{/* <!--end::LIst widget 25--> */}
 										</div>
 										{/* <!--end::Col--> */}
-										<div className="card  card-xxl-stretch mb-5 mb-xxl-10">
-                                        {/* <!--begin::Header--> */}
-                                        <div className="card-header">
-                                            <div className="card-title">
-                                                <h3>Earnings</h3>
-                                            </div>
-                                        </div>
-                                        {/* <!--end::Header--> */}
+										<div className="col-12 my-0">
+											<div className="card  card-xxl-stretch mb-5 mb-xxl-10">
+												{/* <!--begin::Header--> */}
+												<div className="card-header">
+													<div className="card-title">
+														<h3>Earnings</h3>
+													</div>
+												</div>
+												{/* <!--end::Header--> */}
 
-                                        {/* <!--begin::Body--> */}
-                                        <div className="card-body pb-0">
-                                            <span className="fs-5 fw-semibold text-gray-600 pb-5 d-block">Last 30 day earnings calculated. Apart from arranging the order of topics.</span>
+												{/* <!--begin::Body--> */}
+												<div className="card-body pb-0">
+													<span className="fs-5 fw-semibold text-gray-600 pb-5 d-block">Last 30 day earnings calculated. Apart from arranging the order of topics.</span>
 
-                                            {/* <!--begin::Left Section--> */}
-                                            <div className="d-flex flex-wrap justify-content-between pb-6">
-                                                {/* <!--begin::Row--> */}
-                                                <div className="d-flex flex-wrap">
-                                                    {/* <!--begin::Col--> */}
-                                                    <div className="border border-dashed border-gray-300 w-125px rounded my-3 p-4 me-6">                    
-                                                        <span className="fs-2x fw-bold text-gray-800 lh-1">
-                                                            <span data-kt-countup="true" data-kt-countup-value="6,840" data-kt-countup-prefix="$" className="counted" data-kt-initialized="1">$6,840</span>
-                                                        </span>
-                                                        <span className="fs-6 fw-semibold text-gray-400 d-block lh-1 pt-2">Net Earnings</span>
-                                                    </div>
-                                                    {/* <!--end::Col--> */}
+													{/* <!--begin::Left Section--> */}
+													<div className="d-flex flex-wrap justify-content-between pb-6">
+														{/* <!--begin::Row--> */}
+														<div className="d-flex flex-wrap">
+															{/* <!--begin::Col--> */}
+															<div className="border border-gray-300 border-dashed rounded min-w-125px py-3 px-4 me-6 mb-3">
+																<div className="d-flex align-items-center">
+																	<div className="fs-2 fw-bold text-primary">$6,840</div>
+																</div>
+																<div className="fw-semibold fs-6 text-muted">Net Earnings</div>
+															</div>
+															{/* <!--end::Col--> */}
+															{/* <!--begin::Col--> */}
+															<div className="border border-gray-300 border-dashed rounded min-w-125px py-3 px-4 me-6 mb-3">
+																<div className="d-flex align-items-center">
+																	<div className="fs-2 fw-bold text-primary">$1,240</div>
+																</div>
+																<div className="fw-semibold fs-6 text-muted">Fees</div>
+															</div>
+															{/* <!--end::Col--> */}
+														</div>
+														{/* <!--end::Row--> */}
 
-
-                                                    {/* <!--begin::Col--> */}
-                                                    <div className="border border-dashed border-gray-300 w-125px rounded my-3 p-4 me-6">
-                                                        <span className="fs-2x fw-bold text-gray-800 lh-1">
-                                                            <span data-kt-countup="true" data-kt-countup-value="1,240" data-kt-countup-prefix="$" className="counted" data-kt-initialized="1">$1,240</span>
-                                                        </span>
-                                                        <span className="fs-6 fw-semibold text-gray-400 d-block lh-1 pt-2">Fees</span>
-                                                    </div>
-                                                    {/* <!--end::Col--> */}
-                                                </div>
-                                                {/* <!--end::Row--> */}
-
-                                                {/* <a href="#" className="btn btnButton  px-6 flex-shrink-0 align-self-center">Withdraw Earnings</a>              */}
-                                            </div>
-                                            {/* <!--end::Left Section--> */}
-                                        </div>
-                                        {/* <!--end::Body--> */}
-                                    </div>
+														{/* <a href="#" className="btn btnButton  px-6 flex-shrink-0 align-self-center">Withdraw Earnings</a>              */}
+													</div>
+													{/* <!--end::Left Section--> */}
+												</div>
+												{/* <!--end::Body--> */}
+											</div>
+										</div>
 										{/* <!--begin::Col--> */}
-                                    <div className="col-lg-12 mb-5 mb-xl-0">
+                                    <div className="col-lg-12 mb-5 mb-xl-0 mt-0">
 											{/* <!--begin::Statements--> */}
 									<div className="card">
 										{/* <!--begin::Header--> */}
@@ -305,7 +309,7 @@ function ViewBudgetForecast() {
 														<tbody className="fs-6 fw-semibold text-gray-600">
 															<tr>
 																<td className="ps-9">Nov 01, 2020</td>
-																<td>Alan Johnson</td>
+																<td className='text-primary'>Alan Johnson</td>
 																<td className="text-success">$38.00</td>
 																<td className="text-center">
 																	<a href="#" className="btn btn-sm btn-light image.png btn-active-light-primary" data-kt-menu-trigger="click" data-kt-menu-placement="bottom-end">Actions
@@ -333,7 +337,7 @@ function ViewBudgetForecast() {
 															</tr>
 															<tr>
 																<td className="ps-9">Oct 24, 2020</td>
-																<td>Seller Fee</td>
+																<td className='text-primary'>Seller Fee</td>
 																<td className="text-success">$31.00</td>
 																<td className="text-center">
 																	<a href="#" className="btn btn-sm btn-light image.png btn-active-light-primary" data-kt-menu-trigger="click" data-kt-menu-placement="bottom-end">Actions
@@ -361,7 +365,7 @@ function ViewBudgetForecast() {
 															</tr>
 															<tr>
 																<td className="ps-9">Oct 08, 2020</td>
-																<td>Adam Williams</td>
+																<td className="text-primary">Adam Williams</td>
 																<td className="text-success">$76.00</td>
 																<td className="text-center">
 																	<a href="#" className="btn btn-sm btn-light image.png btn-active-light-primary" data-kt-menu-trigger="click" data-kt-menu-placement="bottom-end">Actions
@@ -389,7 +393,7 @@ function ViewBudgetForecast() {
 															</tr>
 															<tr>
 																<td className="ps-9">Sep 15, 2020</td>
-																<td>Olivia Wild</td>
+																<td className="text-primary">Olivia Wild</td>
 																<td className="text-success">$5.00</td>
 																<td className="text-center">
 																	<a href="#" className="btn btn-sm btn-light image.png btn-active-light-primary" data-kt-menu-trigger="click" data-kt-menu-placement="bottom-end">Actions
@@ -417,7 +421,7 @@ function ViewBudgetForecast() {
 															</tr>
 															<tr>
 																<td className="ps-9">May 30, 2020</td>
-																<td>Neil Owen</td>
+																<td className="text-primary">Neil Owen</td>
 																<td className="text-success">$31.00</td>
 																<td className="text-center">
 																	<a href="#" className="btn btn-sm btn-light image.png btn-active-light-primary" data-kt-menu-trigger="click" data-kt-menu-placement="bottom-end">Actions
@@ -445,7 +449,7 @@ function ViewBudgetForecast() {
 															</tr>
 															<tr>
 																<td className="ps-9">Apr 22, 2020</td>
-																<td>Peter Marcus</td>
+																<td className="text-primary">Peter Marcus</td>
 																<td className="text-success">$204.00</td>
 																<td className="text-center">
 																	<a href="#" className="btn btn-sm btn-light image.png btn-active-light-primary" data-kt-menu-trigger="click" data-kt-menu-placement="bottom-end">Actions
@@ -473,7 +477,7 @@ function ViewBudgetForecast() {
 															</tr>
 															<tr>
 																<td className="ps-9">Feb 09, 2020</td>
-																<td>Benjamin Jacob</td>
+																<td className="text-primary">Benjamin Jacob</td>
 																<td className="text-success">$31.00</td>
 																<td className="text-center">
 																	<a href="#" className="btn btn-sm btn-light image.png btn-active-light-primary" data-kt-menu-trigger="click" data-kt-menu-placement="bottom-end">Actions
@@ -501,7 +505,7 @@ function ViewBudgetForecast() {
 															</tr>
 															<tr>
 																<td className="ps-9">Nov 01, 2020</td>
-																<td>Alan Johnson</td>
+																<td className="text-primary">Alan Johnson</td>
 																<td className="text-success">$52.00</td>
 																<td className="text-center">
 																	<a href="#" className="btn btn-sm btn-light image.png btn-active-light-primary" data-kt-menu-trigger="click" data-kt-menu-placement="bottom-end">Actions
@@ -529,7 +533,7 @@ function ViewBudgetForecast() {
 															</tr>
 															<tr>
 																<td className="ps-9">Jan 04, 2020</td>
-																<td>Sean Bean</td>
+																<td className="text-primary">Sean Bean</td>
 																<td className="text-success">$31.00</td>
 																<td className="text-center">
 																	<a href="#" className="btn btn-sm btn-light image.png btn-active-light-primary" data-kt-menu-trigger="click" data-kt-menu-placement="bottom-end">Actions
@@ -917,7 +921,7 @@ function ViewBudgetForecast() {
 													</div>
 													{/* <!--end::Left Section--> */}
                                                     <div className="table-responsive border-bottom mb-14">
-																<table className="table">
+																<table className="table mt-5">
 																	<thead>
 																		<tr className="border-bottom fs-6 fw-bold text-muted text-uppercase">
 																			<th className="min-w-175px pb-9">Description</th>
@@ -927,26 +931,27 @@ function ViewBudgetForecast() {
 																		</tr>
 																	</thead>
 																	<tbody>
-																		<tr className="fw-bold text-gray-700 fs-5 text-end">
-																			<td className="d-flex align-items-center pt-11">
-																			<a href="../viewinvoice/" className="text-gray-700"><i className="fa fa-genderless text-danger fs-1 me-2"></i>Plumbing</a></td>
-																			<td className="pt-11">2021001</td>
-																			<td className="pt-11">12 Apr 2023</td>
-																			<td className="pt-11 fs-5 pe-lg-6 text-dark fw-bolder">$3200.00</td>
-																		</tr>
-																		<tr className="fw-bold text-gray-700 fs-5 text-end">
-																			<td className="d-flex align-items-center">
-																			<a href="../viewinvoice/" className="text-gray-700"><i className="fa fa-genderless text-success fs-1 me-2"></i>Planning</a></td>
-																			<td>2021001</td>
+																		<tr className="fw-bold text-gray-700 fs-5 text-end border-bottom">
+																			<td className="d-flex align-items-center pb-5">
+																			<a className="text-gray-700"><i className="fa fa-genderless text-danger fs-1 me-2"></i>Plumbing</a></td>
+																			<td className='text-primary'>2021001</td>
 																			<td>12 Apr 2023</td>
-																			<td className="fs-5 text-dark fw-bolder pe-lg-6">$4800.00</td>
+																			<td className="fs-5 pe-lg-6 text-dark fw-bolder text-danger">$3200.00</td>
 																		</tr>
-																		<tr className="fw-bold text-gray-700 fs-5 text-end">
-																			<td className="d-flex align-items-center pb-10">
-																			<a href="../viewinvoice/" className="text-gray-700"><i className="fa fa-genderless text-primary fs-1 me-2"></i>Pre Construction</a></td>
-																			<td>2021001</td>
+																		
+																		<tr className="fw-bold text-gray-700 fs-5 text-end border-bottom pb-3">
+																			<td className="d-flex align-items-center pb-5">
+																			<a className="text-gray-700"><i className="fa fa-genderless text-success fs-1 me-2"></i>Planning</a></td>
+																			<td className='text-primary'>2021001</td>
 																			<td>12 Apr 2023</td>
-																			<td className="fs-5 text-dark fw-bolder pe-lg-6">$12600.00</td>
+																			<td className="fs-5 text-dark fw-bolder pe-lg-6 text-success">$4800.00</td>
+																		</tr>
+																		<tr className="fw-bold text-gray-700 fs-5 text-end border-bottom">
+																			<td className="d-flex align-items-center pb-0">
+																			<a className="text-gray-700"><i className="fa fa-genderless text-primary fs-1 me-2"></i>Pre Construction</a></td>
+																			<td className='text-primary'>2021001</td>
+																			<td>12 Apr 2023</td>
+																			<td className="fs-5 text-dark fw-bolder pe-lg-6 text-primary">$12600.00</td>
 																		</tr>
 																	</tbody>
 																</table>

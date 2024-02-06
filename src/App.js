@@ -28,6 +28,7 @@ import Invitedsubcontractor from "./pages/invitedsubcontractor";
 import Viewbid from "./pages/viewbid";
 import AddBid from "./pages/addBid";
 import Specificationdetail from "./pages/specificationdetail";
+import ProjectManagement from "./pages/projectmanagement";
 
 // builder url
 import BuilderDashboard from "./pages/builderdashboard";
@@ -98,6 +99,8 @@ function App() {
         <Route path="/buildifyaichat" element={<Buildifyaichat />} />
         <Route path="/budgetforecast" element={<BudgetForecast />} />
         <Route path="/companysettings" element={<CompanySettings />} />
+        <Route path="/projectManagement" element={<ProjectManagement />} />
+
       </Routes>
     {/* </Router> */}
    

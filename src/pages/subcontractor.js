@@ -171,7 +171,7 @@ function SubcontractorDate() {
                     </div>
                     {/* end::Toolbar */}
                     {/* begin::Tab Content */}
-                    <div className='separator separator-dashed mb-5'></div>
+                    <div className='separator separator-2dashed2 mb-5'></div>
 
                     <div className="tab-content">
                         {/* begin::Tab pane */}
@@ -228,7 +228,7 @@ function SubcontractorDate() {
 													</div>
 													{/* <!--end::Section--> */}
 													{/* <!--begin::Seperator--> */}
-													<div class="separator separator-dashed mb-5"></div>
+													<div class="separator separator-solid mb-5"></div>
 													{/* <!--end::Seperator--> */}
 													{/* <!--begin::Section--> */}
 													<div class="mb-5">
@@ -247,7 +247,7 @@ function SubcontractorDate() {
 														</div>
 														{/* <!--end::Details--> */}
 													</div>
-													<div class="separator separator-dashed mb-5"></div>
+													<div class="separator separator-solid mb-5"></div>
 													<div class="mb-5">
 														{/* <!--begin::Title--> */}
 														<h5 class="mb-4">Price</h5>
@@ -260,7 +260,7 @@ function SubcontractorDate() {
 													</div>
 													{/* <!--end::Section--> */}
 													{/* <!--begin::Seperator--> */}
-													<div class="separator separator-dashed mb-5"></div>
+													<div class="separator separator-solid mb-5"></div>
 													{/* <!--end::Seperator--> */}
 													{/* <!--begin::Section--> */}
 													<div class="mb-7">
@@ -276,7 +276,7 @@ function SubcontractorDate() {
 														</div>
 														{/* <!--end::Details--> */}
 													</div>
-													<div class="separator separator-dashed mb-5"></div>
+													<div class="separator separator-solid mb-5"></div>
 													<div class="mb-7">
 														{/* <!--begin::Title--> */}
 														<h5 class="mb-4">Status</h5>
@@ -292,7 +292,7 @@ function SubcontractorDate() {
 													</div>
 													{/* <!--end::Section--> */}
 													{/* <!--begin::Seperator--> */}
-													<div class="separator separator-dashed mb-5"></div>
+													<div class="separator separator-solid mb-5"></div>
 													{/* <!--end::Seperator--> */}
 													{/* <!--begin::Section--> */}
 													<div class="row col-lg-12 d-flex justify-content-center">
@@ -361,7 +361,7 @@ function SubcontractorDate() {
 													</div>
 													{/* <!--end::Section--> */}
 													{/* <!--begin::Seperator--> */}
-													<div class="separator separator-dashed mb-5"></div>
+													<div class="separator separator-solid mb-5"></div>
 													{/* <!--end::Seperator--> */}
 													{/* <!--begin::Section--> */}
 													<div class="mb-5">
@@ -380,7 +380,7 @@ function SubcontractorDate() {
 														</div>
 														{/* <!--end::Details--> */}
 													</div>
-													<div class="separator separator-dashed mb-5"></div>
+													<div class="separator separator-solid mb-5"></div>
 													<div class="mb-5">
 														{/* <!--begin::Title--> */}
 														<h5 class="mb-4">Price</h5>
@@ -393,7 +393,7 @@ function SubcontractorDate() {
 													</div>
 													{/* <!--end::Section--> */}
 													{/* <!--begin::Seperator--> */}
-													<div class="separator separator-dashed mb-5"></div>
+													<div class="separator separator-solid mb-5"></div>
 													{/* <!--end::Seperator--> */}
 													{/* <!--begin::Section--> */}
 													<div class="mb-7">
@@ -409,7 +409,7 @@ function SubcontractorDate() {
 														</div>
 														{/* <!--end::Details--> */}
 													</div>
-													<div class="separator separator-dashed mb-5"></div>
+													<div class="separator separator-solid mb-5"></div>
 													<div class="mb-7">
 														{/* <!--begin::Title--> */}
 														<h5 class="mb-4">Status</h5>
@@ -425,7 +425,7 @@ function SubcontractorDate() {
 													</div>
 													{/* <!--end::Section--> */}
 													{/* <!--begin::Seperator--> */}
-													<div class="separator separator-dashed mb-5"></div>
+													<div class="separator separator-solid mb-5"></div>
 													{/* <!--end::Seperator--> */}
 													{/* <!--begin::Section--> */}
 													<div class="row col-lg-12 d-flex justify-content-center">
@@ -494,7 +494,7 @@ function SubcontractorDate() {
 													</div>
 													{/* <!--end::Section--> */}
 													{/* <!--begin::Seperator--> */}
-													<div class="separator separator-dashed mb-5"></div>
+													<div class="separator separator-solid mb-5"></div>
 													{/* <!--end::Seperator--> */}
 													{/* <!--begin::Section--> */}
 													<div class="mb-5">
@@ -513,7 +513,7 @@ function SubcontractorDate() {
 														</div>
 														{/* <!--end::Details--> */}
 													</div>
-													<div class="separator separator-dashed mb-5"></div>
+													<div class="separator separator-solid mb-5"></div>
 													<div class="mb-5">
 														{/* <!--begin::Title--> */}
 														<h5 class="mb-4">Price</h5>
@@ -526,7 +526,7 @@ function SubcontractorDate() {
 													</div>
 													{/* <!--end::Section--> */}
 													{/* <!--begin::Seperator--> */}
-													<div class="separator separator-dashed mb-5"></div>
+													<div class="separator separator-solid mb-5"></div>
 													{/* <!--end::Seperator--> */}
 													{/* <!--begin::Section--> */}
 													<div class="mb-7">
@@ -542,7 +542,7 @@ function SubcontractorDate() {
 														</div>
 														{/* <!--end::Details--> */}
 													</div>
-													<div class="separator separator-dashed mb-5"></div>
+													<div class="separator separator-solid mb-5"></div>
 													<div class="mb-7">
 														{/* <!--begin::Title--> */}
 														<h5 class="mb-4">Status</h5>
@@ -558,7 +558,7 @@ function SubcontractorDate() {
 													</div>
 													{/* <!--end::Section--> */}
 													{/* <!--begin::Seperator--> */}
-													<div class="separator separator-dashed mb-5"></div>
+													<div class="separator separator-solid mb-5"></div>
 													{/* <!--end::Seperator--> */}
 													{/* <!--begin::Section--> */}
 													<div class="row col-lg-12 d-flex justify-content-center">
@@ -627,7 +627,7 @@ function SubcontractorDate() {
 													</div>
 													{/* <!--end::Section--> */}
 													{/* <!--begin::Seperator--> */}
-													<div class="separator separator-dashed mb-5"></div>
+													<div class="separator separator-solid mb-5"></div>
 													{/* <!--end::Seperator--> */}
 													{/* <!--begin::Section--> */}
 													<div class="mb-5">
@@ -646,7 +646,7 @@ function SubcontractorDate() {
 														</div>
 														{/* <!--end::Details--> */}
 													</div>
-													<div class="separator separator-dashed mb-5"></div>
+													<div class="separator separator-solid mb-5"></div>
 													<div class="mb-5">
 														{/* <!--begin::Title--> */}
 														<h5 class="mb-4">Price</h5>
@@ -659,7 +659,7 @@ function SubcontractorDate() {
 													</div>
 													{/* <!--end::Section--> */}
 													{/* <!--begin::Seperator--> */}
-													<div class="separator separator-dashed mb-5"></div>
+													<div class="separator separator-solid mb-5"></div>
 													{/* <!--end::Seperator--> */}
 													{/* <!--begin::Section--> */}
 													<div class="mb-7">
@@ -675,7 +675,7 @@ function SubcontractorDate() {
 														</div>
 														{/* <!--end::Details--> */}
 													</div>
-													<div class="separator separator-dashed mb-5"></div>
+													<div class="separator separator-solid mb-5"></div>
 													<div class="mb-7">
 														{/* <!--begin::Title--> */}
 														<h5 class="mb-4">Status</h5>
@@ -691,7 +691,7 @@ function SubcontractorDate() {
 													</div>
 													{/* <!--end::Section--> */}
 													{/* <!--begin::Seperator--> */}
-													<div class="separator separator-dashed mb-5"></div>
+													<div class="separator separator-solid mb-5"></div>
 													{/* <!--end::Seperator--> */}
 													{/* <!--begin::Section--> */}
 													<div class="row col-lg-12 d-flex justify-content-center">
@@ -762,7 +762,7 @@ function SubcontractorDate() {
 													</div>
 													{/* <!--end::Section--> */}
 													{/* <!--begin::Seperator--> */}
-													<div class="separator separator-dashed mb-5"></div>
+													<div class="separator separator-solid mb-5"></div>
 													{/* <!--end::Seperator--> */}
 													{/* <!--begin::Section--> */}
 													<div class="mb-5">
@@ -781,7 +781,7 @@ function SubcontractorDate() {
 														</div>
 														{/* <!--end::Details--> */}
 													</div>
-													<div class="separator separator-dashed mb-5"></div>
+													<div class="separator separator-solid mb-5"></div>
 													<div class="mb-5">
 														{/* <!--begin::Title--> */}
 														<h5 class="mb-4">Price</h5>
@@ -794,7 +794,7 @@ function SubcontractorDate() {
 													</div>
 													{/* <!--end::Section--> */}
 													{/* <!--begin::Seperator--> */}
-													<div class="separator separator-dashed mb-5"></div>
+													<div class="separator separator-solid mb-5"></div>
 													{/* <!--end::Seperator--> */}
 													{/* <!--begin::Section--> */}
 													<div class="mb-7">
@@ -810,7 +810,7 @@ function SubcontractorDate() {
 														</div>
 														{/* <!--end::Details--> */}
 													</div>
-													<div class="separator separator-dashed mb-5"></div>
+													<div class="separator separator-solid mb-5"></div>
 													<div class="mb-7">
 														{/* <!--begin::Title--> */}
 														<h5 class="mb-4">Status</h5>
@@ -826,7 +826,7 @@ function SubcontractorDate() {
 													</div>
 													{/* <!--end::Section--> */}
 													{/* <!--begin::Seperator--> */}
-													<div class="separator separator-dashed mb-5"></div>
+													<div class="separator separator-solid mb-5"></div>
 													{/* <!--end::Seperator--> */}
 													{/* <!--begin::Section--> */}
 													<div class="row col-lg-12 d-flex justify-content-center">
@@ -895,7 +895,7 @@ function SubcontractorDate() {
 													</div>
 													{/* <!--end::Section--> */}
 													{/* <!--begin::Seperator--> */}
-													<div class="separator separator-dashed mb-5"></div>
+													<div class="separator separator-solid mb-5"></div>
 													{/* <!--end::Seperator--> */}
 													{/* <!--begin::Section--> */}
 													<div class="mb-5">
@@ -914,7 +914,7 @@ function SubcontractorDate() {
 														</div>
 														{/* <!--end::Details--> */}
 													</div>
-													<div class="separator separator-dashed mb-5"></div>
+													<div class="separator separator-solid mb-5"></div>
 													<div class="mb-5">
 														{/* <!--begin::Title--> */}
 														<h5 class="mb-4">Price</h5>
@@ -927,7 +927,7 @@ function SubcontractorDate() {
 													</div>
 													{/* <!--end::Section--> */}
 													{/* <!--begin::Seperator--> */}
-													<div class="separator separator-dashed mb-5"></div>
+													<div class="separator separator-solid mb-5"></div>
 													{/* <!--end::Seperator--> */}
 													{/* <!--begin::Section--> */}
 													<div class="mb-7">
@@ -943,7 +943,7 @@ function SubcontractorDate() {
 														</div>
 														{/* <!--end::Details--> */}
 													</div>
-													<div class="separator separator-dashed mb-5"></div>
+													<div class="separator separator-solid mb-5"></div>
 													<div class="mb-7">
 														{/* <!--begin::Title--> */}
 														<h5 class="mb-4">Status</h5>
@@ -959,7 +959,7 @@ function SubcontractorDate() {
 													</div>
 													{/* <!--end::Section--> */}
 													{/* <!--begin::Seperator--> */}
-													<div class="separator separator-dashed mb-5"></div>
+													<div class="separator separator-solid mb-5"></div>
 													{/* <!--end::Seperator--> */}
 													{/* <!--begin::Section--> */}
 													<div class="row col-lg-12 d-flex justify-content-center">
@@ -1028,7 +1028,7 @@ function SubcontractorDate() {
 													</div>
 													{/* <!--end::Section--> */}
 													{/* <!--begin::Seperator--> */}
-													<div class="separator separator-dashed mb-5"></div>
+													<div class="separator separator-solid mb-5"></div>
 													{/* <!--end::Seperator--> */}
 													{/* <!--begin::Section--> */}
 													<div class="mb-5">
@@ -1047,7 +1047,7 @@ function SubcontractorDate() {
 														</div>
 														{/* <!--end::Details--> */}
 													</div>
-													<div class="separator separator-dashed mb-5"></div>
+													<div class="separator separator-solid mb-5"></div>
 													<div class="mb-5">
 														{/* <!--begin::Title--> */}
 														<h5 class="mb-4">Price</h5>
@@ -1060,7 +1060,7 @@ function SubcontractorDate() {
 													</div>
 													{/* <!--end::Section--> */}
 													{/* <!--begin::Seperator--> */}
-													<div class="separator separator-dashed mb-5"></div>
+													<div class="separator separator-solid mb-5"></div>
 													{/* <!--end::Seperator--> */}
 													{/* <!--begin::Section--> */}
 													<div class="mb-7">
@@ -1076,7 +1076,7 @@ function SubcontractorDate() {
 														</div>
 														{/* <!--end::Details--> */}
 													</div>
-													<div class="separator separator-dashed mb-5"></div>
+													<div class="separator separator-solid mb-5"></div>
 													<div class="mb-7">
 														{/* <!--begin::Title--> */}
 														<h5 class="mb-4">Status</h5>
@@ -1092,7 +1092,7 @@ function SubcontractorDate() {
 													</div>
 													{/* <!--end::Section--> */}
 													{/* <!--begin::Seperator--> */}
-													<div class="separator separator-dashed mb-5"></div>
+													<div class="separator separator-solid mb-5"></div>
 													{/* <!--end::Seperator--> */}
 													{/* <!--begin::Section--> */}
 													<div class="row col-lg-12 d-flex justify-content-center">
@@ -1161,7 +1161,7 @@ function SubcontractorDate() {
 													</div>
 													{/* <!--end::Section--> */}
 													{/* <!--begin::Seperator--> */}
-													<div class="separator separator-dashed mb-5"></div>
+													<div class="separator separator-solid mb-5"></div>
 													{/* <!--end::Seperator--> */}
 													{/* <!--begin::Section--> */}
 													<div class="mb-5">
@@ -1180,7 +1180,7 @@ function SubcontractorDate() {
 														</div>
 														{/* <!--end::Details--> */}
 													</div>
-													<div class="separator separator-dashed mb-5"></div>
+													<div class="separator separator-solid mb-5"></div>
 													<div class="mb-5">
 														{/* <!--begin::Title--> */}
 														<h5 class="mb-4">Price</h5>
@@ -1193,7 +1193,7 @@ function SubcontractorDate() {
 													</div>
 													{/* <!--end::Section--> */}
 													{/* <!--begin::Seperator--> */}
-													<div class="separator separator-dashed mb-5"></div>
+													<div class="separator separator-solid mb-5"></div>
 													{/* <!--end::Seperator--> */}
 													{/* <!--begin::Section--> */}
 													<div class="mb-7">
@@ -1209,7 +1209,7 @@ function SubcontractorDate() {
 														</div>
 														{/* <!--end::Details--> */}
 													</div>
-													<div class="separator separator-dashed mb-5"></div>
+													<div class="separator separator-solid mb-5"></div>
 													<div class="mb-7">
 														{/* <!--begin::Title--> */}
 														<h5 class="mb-4">Status</h5>
@@ -1225,7 +1225,7 @@ function SubcontractorDate() {
 													</div>
 													{/* <!--end::Section--> */}
 													{/* <!--begin::Seperator--> */}
-													<div class="separator separator-dashed mb-5"></div>
+													<div class="separator separator-solid mb-5"></div>
 													{/* <!--end::Seperator--> */}
 													{/* <!--begin::Section--> */}
 													<div class="row col-lg-12 d-flex justify-content-center">

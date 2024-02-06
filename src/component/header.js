@@ -203,7 +203,7 @@ export default function Header() {
 												</span>
 												<div className="w_160 d-none" id="projectManagementSub">
 													<div className="menu-item">
-														<Link className="menu-link" style={{ color: '#5e6278' }} to="#">
+														<Link className="menu-link" style={{ color: '#5e6278' }} to="../projectmanagement/">
 															<span className="menu-icon">
 																<i className="ki-outline ki-calendar fs-2"></i>
 															</span>
@@ -495,7 +495,7 @@ export default function Header() {
 												</span>
 												<div className="dropdown-menu w_160" aria-labelledby="dropdownMenuButton">
 													<div className="menu-item">
-														<Link onClick={() => handleSetactiveTab('Project Managment', 'Schedule')} className="menu-link" to="#" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-dismiss="click" data-bs-placement="right">
+														<Link onClick={() => handleSetactiveTab('Project Managment', 'Schedule')} className="menu-link" to="../projectmanagement/" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-dismiss="click" data-bs-placement="right">
 															<span className="menu-icon">
 																<i className={`ki-outline ki-calendar fs-2 ${activeSubMenuName == "Schedule" ? "text-primary" : ""}`}></i>
 															</span>
@@ -1145,6 +1145,11 @@ export default function Header() {
 											{/* <!--begin:Menu item--> */}
 											<div className="menu-item">
 												<Link to="../profile/" className="menu-link text-black fw-semibold px-5">My Profile</Link>
+											</div>
+											{/* <!--end:Menu item--> */}
+											{/* <!--begin:Menu item--> */}
+											<div className="menu-item">
+												<Link to="../companysettings/" className="menu-link text-black fw-semibold px-5">Settings</Link>
 											</div>
 											{/* <!--end:Menu item--> */}
 											{/* <!--begin:Menu item--> */}
