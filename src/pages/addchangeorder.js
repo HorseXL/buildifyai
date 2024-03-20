@@ -11,9 +11,9 @@ function AddchangeordersData() {
     document.title = 'Buildify AI | Business Finances'
 
     const navigate = useNavigate();
-    const [isAgree,setIsAgree] = useState(false)
+    // const [isAgree,setIsAgree] = useState(false)
     function saveDate() {
-        setIsAgree(true);
+        // setIsAgree(true);
         localStorage.setItem("activeTab","Project Managment")
         localStorage.setItem("activeTabSub","Change Orders")
     }
@@ -90,10 +90,11 @@ function AddchangeordersData() {
                                             {/* <div className="col-lg"></div>
                                             <div className="col-lg"></div> */}
                                             <div className="d-flex justify-content-center">
-                                                <Link class="btn btnButton mx-2" onClick={()=>setIsAgree(true)}>Save</Link>
+                                                {/* <Link class="btn btnButton mx-2" onClick={()=>setIsAgree(true)}>Save</Link> */}
+                                                <Link class="btn btnButton mx-2">Save</Link>
                                             </div>
                                         </div>
-                                    {isAgree  && (
+                                    {/* {isAgree  && ( */}
                                         <>
                                          <div className="row col-lg-12 gx-10 mb-5">
                                          {/* <!--begin::Col--> */}
@@ -178,7 +179,7 @@ function AddchangeordersData() {
                                             </div>
                                         </div>
                                          </>
-                                    )}
+                                    {/* )} */}
                                     </form>
                                     {/* <!--end::Form--> */}
                                 </div>

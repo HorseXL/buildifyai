@@ -28,6 +28,7 @@ import Invitedsubcontractor from "./pages/invitedsubcontractor";
 import Viewbid from "./pages/viewbid";
 import AddBid from "./pages/addBid";
 import Specificationdetail from "./pages/specificationdetail";
+import ProjectManagement from "./pages/projectmanagement";
 
 // builder url
 import BuilderDashboard from "./pages/builderdashboard";
@@ -47,6 +48,8 @@ import Manageteam from "./pages/manageteam";
 import Addteammember from "./pages/addteammember";
 import Viewchangeorder from "./pages/viewchangeorder";
 import Addchangeorder from "./pages/addchangeorder";
+import ProjectList from "./pages/projectlist";
+import Calender from "./pages/calender";
 
 function App() {
 
@@ -59,7 +62,7 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/signUp" element={<SignUp />} />
         <Route path="/forgotpassword" element={<Forgotpassword />} />
-		<Route path="/otpverification" element={<Otpverification />} />
+		    <Route path="/otpverification" element={<Otpverification />} />
         <Route path="/resetpassword" element={<Resetpassword />} />
         <Route path="/createaccount" element={<Createaccount />} />
         <Route path="/ownerdashboard" element={<OwnerDashboard />} />
@@ -76,6 +79,9 @@ function App() {
         <Route path="/viewchangeorder" element={<Viewchangeorder />} />
         <Route path="/addchangeorder" element={<Addchangeorder />} />
         <Route path="/specificationdetail" element={<Specificationdetail />} />
+        <Route path="/projectManagement" element={<ProjectManagement />} />
+        <Route path="/ProjectList" element={<ProjectList />} />
+        <Route path="/calender" element={<Calender />} />
 		    {/* builder route */}
         <Route path="/builderdashboard" element={<BuilderDashboard />} />
         <Route path="/builderprojectdetails" element={<BuilderProjectDetail />} />

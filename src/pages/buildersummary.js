@@ -323,7 +323,7 @@ function SummaryData() {
 									<ul className="nav nav-pills d-flex flex-nowrap hover-scroll-x py-2">
 										{/*begin::Date */}
 										<li className="nav-item me-1">
-											<a className="nav-link btn d-flex flex-column flex-center rounded-pill min-w-45px me-2 py-4 px-3 btn-active-primary" data-bs-toggle="tab" href="#kt_schedule_day_0">
+											<a className="nav-link  btn d-flex flex-column flex-center rounded-pill min-w-45px me-2 py-4 px-3 btn-active-primary" data-bs-toggle="tab" href="#kt_schedule_day_0">
 												<span className="opacity-50 fs-7 fw-semibold">Su</span>
 												<span className="fs-6 fw-bold">22</span>
 											</a>
@@ -1426,6 +1426,6 @@ function SummaryData() {
 	)
 }
 function Buildersummary() {
-	return <Layout data={<SummaryData />} />
+	return <Layout data={<SummaryData />} activePage="Summary"/>
 }
 export default Buildersummary;

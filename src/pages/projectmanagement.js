@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import Layout from './layout';
+import 'react-calendar/dist/Calendar.css';
 import { Calendar, momentLocalizer } from 'react-big-calendar'
 import 'react-big-calendar/lib/css/react-big-calendar.css'
 import moment from 'moment'
@@ -66,7 +67,7 @@ const customStyles = {
 											<h2 class="card-title fw-bold">Calendar</h2>
 											<div class="card-toolbar">
 												<button class="btn btn-flex btnButton" data-kt-calendar="add" onClick={()=>seteventModel(true)}>
-												<i class="ki-outline ki-plus fs-2"></i>Add Schedule</button>
+												<i class="ki-outline ki-plus fs-2"></i>Add Event</button>
 											</div>
 										</div>
 										{/* end::Card header */}

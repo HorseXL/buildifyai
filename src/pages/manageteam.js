@@ -8,6 +8,9 @@ import sketchy from '../assets/images/4.png'
 import { Link } from 'react-router-dom';
 import  Select  from 'react-select';
 import Modal from 'react-modal';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faPencilAlt, faTrashAlt } from '@fortawesome/free-solid-svg-icons';
+
 
 
 function ManageteamData() {
@@ -65,58 +68,210 @@ function ManageteamData() {
 							{/* <!--begin::Tab panel--> */}
 							<div id="kt_referrals_1" className="card-body p-0 tab-pane fade show active" role="tabpanel">
 								<div className="table-responsive">
-									{/* <!--begin::Table--> */}
-									<table className="table align-middle table-row-bordered table-row-solid gy-4 gs-9">
+							
+
+									<table className="table align-middle table-row-bordered table-row-solid gy-4 gs-9 ">
 										{/* <!--begin::Thead--> */}
 										<thead className="border-gray-200 fs-5 fw-semibold bg-lighten">
 											<tr>
-												<th className="min-w-175px text-primary">First name</th>
-												<th className="min-w-175px text-primary">Last Name</th>
-												<th className="min-w-175px text-primary">Primary Email</th>
-												<th className="min-w-125px text-primary">Phone Number</th>
-												<th className="min-w-125px text-primary">Cell Number</th>
-												<th className="min-w-125px text-primary">Role</th>
+												<th className="min-w-75px">S No</th>
+												<th className="min-w-300px">User</th>
+												<th className="min-w-200px">Role</th>
+												<th className="min-w-175px">Last Login</th>
+												<th className="min-w-125px">Two Step</th>
+												<th className="min-w-225px">Joined Date</th>
+												<th className="min-w-125px">Action</th>
 											</tr>
 										</thead>
 										{/* <!--end::Thead--> */}
 										{/* <!--begin::Tbody--> */}
 										<tbody className="fs-6 fw-semibold text-gray-600">
 											<tr>
-												<td className="ps-9">Sean</td>
-												<td className="ps-0">Bean</td>
-												<td>sean@dellito.com</td>
-												<td className="">9632587410</td>
-												<td className="">9632587410</td>
-												<td className="">Employee</td>
+												<td className="">1</td>
+												{/* <td className=" ps-9 text-primary"><img src={a300_5} alt="sketchy" className="mw-20 mh-50px border_circle_radius" /></td> */}
+												<td className='min-w-220px'> 
+													<div class="d-flex align-items-center lh-1"> 
+														<div class="me-2"> 
+															<span class="avatar avatar-md avatar-rounded"> 
+															<img src={a300_5} alt="sketchy" className="mw-20 mh-50px border_circle_radius" />
+															</span> 
+														</div> 
+													<div> 
+													<span class="d-block fw-semibold mb-1">Kane William</span> 
+													<span class="text-muted fs-12">william154@demo</span> 
+													</div> 
+													</div>
+												</td>
+												<td className=" ps-0">Administrator</td>
+												<td className=''><button className="btn-sm badge badge-light fw-bold border-0">Yesterday</button></td>
+												<td className=" text-danger"><button className="btn-sm badge bg-success fw-bold border-0">Enabled</button></td>
+												<td> 21 Feb 2024,9:23 pm</td>
+												<td className=''>
+													<div className="btn p-0">
+														<button className="btn edit-btn-icon btn-sm btn-icon btn-info-light me-2"><FontAwesomeIcon icon={faPencilAlt} className='text-primary'/></button>
+														<button className="btn delete-btn-icon btn-icon btn-sm btn-danger-light"><FontAwesomeIcon icon={faTrashAlt} className='text-danger'/></button>
+													</div>
+												</td>
 											</tr>
 											<tr>
-												<td className="ps-9">Olivia</td>
-												<td className="ps-0">Wild</td>
-												<td>olivia@wild.com</td>
-												<td className="">9513578520</td>
-												<td className="">9513578520</td>
-												<td className="">Employee</td>
+												<td className="">2</td>
+												<td> 
+													<div class="d-flex align-items-center lh-1"> 
+														<div class="me-2"> 
+															<span class="avatar avatar-md avatar-rounded"> 
+															<img src={a300_5} alt="sketchy" className="mw-20 mh-50px border_circle_radius" />
+															</span> 
+														</div> 
+													<div> 
+													<span class="d-block fw-semibold mb-1">Kane William</span> 
+													<span class="text-muted fs-12">william154@demo</span> 
+													</div> 
+													</div>
+												</td>
+												<td className=" ps-0">Administrator</td>
+												<td className=''><button className="btn-sm badge badge-light fw-bold border-0">20 Min Ago</button></td>
+												<td className=" text-danger"></td>
+												<td> 10 Dec 2023,9:23 pm</td>
+												<td className=''>
+													<div className="btn p-0">
+														<button className="btn edit-btn-icon btn-sm btn-icon btn-info-light me-2"><FontAwesomeIcon icon={faPencilAlt} className='text-primary'/></button>
+														<button className="btn delete-btn-icon btn-icon btn-sm btn-danger-light"><FontAwesomeIcon icon={faTrashAlt} className='text-danger'/></button>
+													</div>
+												</td>
 											</tr>
 											<tr>
-												<td className="ps-9">Peter</td>
-												<td className="ps-0">Marcus</td>
-												<td>peter@Marcus.com</td>
-												<td className="">7412369850</td>
-												<td className="">7412369850</td>
-												<td className="">Employee</td>
+												<td className="">3</td>
+												<td> 
+													<div class="d-flex align-items-center lh-1"> 
+														<div class="me-2"> 
+															<span class="avatar avatar-md avatar-rounded"> 
+															<img src={a300_5} alt="sketchy" className="mw-20 mh-50px border_circle_radius" />
+															</span> 
+														</div> 
+													<div> 
+													<span class="d-block fw-semibold mb-1">Kane William</span> 
+													<span class="text-muted fs-12">william154@demo</span> 
+													</div> 
+													</div>
+												</td>
+												<td className=" ps-0">Developer</td>
+												<td className=''><button className="btn-sm badge badge-light fw-bold border-0">5 Days Ago</button></td>
+												<td className=" text-success"></td>
+												<td> 15 Jan 2024,11:50 pm</td>
+												<td className=''>
+													<div className="btn p-0">
+														<button className="btn edit-btn-icon btn-sm btn-icon btn-info-light me-2"><FontAwesomeIcon icon={faPencilAlt} className='text-primary'/></button>
+														<button className="btn delete-btn-icon btn-icon btn-sm btn-danger-light"><FontAwesomeIcon icon={faTrashAlt} className='text-danger'/></button>
+													</div>
+												</td>
 											</tr>
 											<tr>
-												<td className="ps-9">Adam</td>
-												<td className="ps-0">Williams</td>
-												<td>adam@williams.com</td>
-												<td className="">8520741963</td>
-												<td className="">8520741963</td>
-												<td className="">Employee</td>
+												<td className="">4</td>
+												<td> 
+													<div class="d-flex align-items-center lh-1"> 
+														<div class="me-2"> 
+															<span class="avatar avatar-md avatar-rounded"> 
+															<img src={a300_5} alt="sketchy" className="mw-20 mh-50px border_circle_radius" />
+															</span> 
+														</div> 
+													<div> 
+													<span class="d-block fw-semibold mb-1">Kane William</span> 
+													<span class="text-muted fs-12">william154@demo</span> 
+													</div> 
+													</div>
+												</td>
+												<td className=" ps-0">Analyst</td>
+												<td className=''><button className="btn-sm badge badge-light fw-bold border-0">2 Days Ago</button></td>
+												<td className=" text-success"></td>
+												<td> 14 Feb 2023,12:23 pm</td>
+												<td className=''>
+													<div className="btn p-0">
+														<button className="btn edit-btn-icon btn-sm btn-icon btn-info-light me-2"><FontAwesomeIcon icon={faPencilAlt} className='text-primary'/></button>
+														<button className="btn delete-btn-icon btn-icon btn-sm btn-danger-light"><FontAwesomeIcon icon={faTrashAlt} className='text-danger'/></button>
+													</div>
+												</td>
+											</tr>
+											<tr>
+												<td className="">5</td>
+												<td> 
+													<div class="d-flex align-items-center lh-1"> 
+														<div class="me-2"> 
+															<span class="avatar avatar-md avatar-rounded"> 
+															<img src={a300_5} alt="sketchy" className="mw-20 mh-50px border_circle_radius" />
+															</span> 
+														</div> 
+													<div> 
+													<span class="d-block fw-semibold mb-1">Kane William</span> 
+													<span class="text-muted fs-12">william154@demo</span> 
+													</div> 
+													</div>
+												</td>
+												<td className=" ps-0">Support</td>
+												<td className=''><button className="btn-sm badge badge-light fw-bold border-0">Yesterday</button></td>
+												<td className=" text-danger"><button className="btn-sm badge bg-success fw-bold border-0">Enabled</button></td>
+												<td> 09 Dec 2023,8:01 am</td>
+												<td className=''>
+													<div className="btn p-0">
+														<button className="btn edit-btn-icon btn-sm btn-icon btn-info-light me-2"><FontAwesomeIcon icon={faPencilAlt} className='text-primary'/></button>
+														<button className="btn delete-btn-icon btn-icon btn-sm btn-danger-light"><FontAwesomeIcon icon={faTrashAlt} className='text-danger'/></button>
+													</div>
+												</td>
+											</tr>
+											<tr>
+												<td className="">6</td>
+												<td> 
+													<div class="d-flex align-items-center lh-1"> 
+														<div class="me-2"> 
+															<span class="avatar avatar-md avatar-rounded"> 
+															<img src={a300_5} alt="sketchy" className="mw-20 mh-50px border_circle_radius" />
+															</span> 
+														</div> 
+													<div> 
+													<span class="d-block fw-semibold mb-1">Kane William</span> 
+													<span class="text-muted fs-12">william154@demo</span> 
+													</div> 
+													</div>
+												</td>
+												<td className=" ps-0">Developer</td>
+												<td className=''><button className="btn-sm badge badge-light fw-bold border-0">10 Min Ago</button></td>
+												<td className=" text-danger"><button className="btn-sm badge bg-success fw-bold border-0">Enabled</button></td>
+												<td> 27 Feb 2024,9:23 pm</td>
+												<td className=''>
+													<div className="btn p-0">
+														<button className="btn edit-btn-icon btn-sm btn-icon btn-info-light me-2"><FontAwesomeIcon icon={faPencilAlt} className='text-primary'/></button>
+														<button className="btn delete-btn-icon btn-icon btn-sm btn-danger-light"><FontAwesomeIcon icon={faTrashAlt} className='text-danger'/></button>
+													</div>
+												</td>
+											</tr>
+											<tr>
+												<td className="">7</td>
+												<td> 
+													<div class="d-flex align-items-center lh-1"> 
+														<div class="me-2"> 
+															<span class="avatar avatar-md avatar-rounded"> 
+															<img src={a300_5} alt="sketchy" className="mw-20 mh-50px border_circle_radius" />
+															</span> 
+														</div> 
+													<div> 
+													<span class="d-block fw-semibold mb-1">Kane William</span> 
+													<span class="text-muted fs-12">william154@demo</span> 
+													</div> 
+													</div>
+												</td>
+												<td className=" ps-0">Analyst</td>
+												<td className=''><button className="btn-sm badge badge-light fw-bold border-0">5 Hour Ago</button></td>
+												<td className=" text-danger"><button className="btn-sm badge bg-success fw-bold border-0">Enabled</button></td>
+												<td> 22 Mar 2024,11:11 pm</td>
+												<td className=''>
+													<div className="btn p-0">
+														<button className="btn edit-btn-icon btn-sm btn-icon btn-info-light me-2"><FontAwesomeIcon icon={faPencilAlt} className='text-primary'/></button>
+														<button className="btn delete-btn-icon btn-icon btn-sm btn-danger-light"><FontAwesomeIcon icon={faTrashAlt} className='text-danger'/></button>
+													</div>
+												</td>
 											</tr>
 										</tbody>
 										{/* <!--end::Tbody--> */}
 									</table>
-									{/* <!--end::Table--> */}
 								</div>
 							</div>
 							<Modal 

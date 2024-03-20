@@ -23,9 +23,9 @@ function BusinessFinancesData() {
 
     return (
         <>
-            <div className="d-flex flex-column flex-column-fluid" >
+            <div className="d-flex flex-column flex-column-fluid" style={{width:"100%"}}>
                 {/*  <!--begin::Content-->  */}
-                <div id="kt_app_content" className="app-content flex-column-fluid">
+                <div id="kt_app_content" className="app-content flex-column-fluid w-100">
                     {/* <!--begin::Layout--> */}
                     <div className="d-flex flex-column flex-lg-row">
                         {/* <!--begin::Content--> */}

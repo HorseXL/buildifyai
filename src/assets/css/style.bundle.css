@@ -752,7 +752,7 @@ progress {
 }
 @media (min-width: 1400px) {
   .container-xxl, .container-xl, .container-lg, .container-md, .container-sm, .container {
-    max-width: 1320px;
+    max-width: 1315px;
   }
 }
 .row {
@@ -49103,4 +49103,123 @@ body,
 
 .activeSpecTab{
   border-bottom: solid 2px #fff;
+}
+
+.react-calendar{
+  width: 100% !important;
+  font-size: 20px !important;
+  border:  solid black 1px;
+}
+.react-calendar__tile{
+  border:  solid black 1px !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.eventpopup{
+  overflow-y: auto;
+  /* position: relative; */
+  max-height: 510px;
+}
+
+.border-grey{
+  border: solid #F4F4F4 1px;
+}
+.left_border{
+  border-right-width: 1px !important;
+  border-right-style: solid !important;
+  border-right-color: var(--bs-border-color);
+}
+
+.border_circle_radius{
+  border-radius: 50% !important;
+}
+
+
+.bg-success{
+  background-color: #50CD89 !important;
+}
+.bg-success:hover{
+  color: black !important;
+  background-color: #50CD89 !important;
+}
+.bg-primary{
+  background-color: #2C9AFF !important;
+}
+.bg-primary:hover{
+  color: black !important;
+  background-color: #2C9AFF !important;
+}
+.bg-warning{
+  background-color: #E78B2F !important;
+}
+.bg-warning:hover{
+  color: black !important;
+  background-color: #E78B2F !important;
+}
+
+.edit-btn-icon{
+  background-color: rgba(73,182,245, .1);
+  color:rgba(73,182,245, .1)
+}
+.edit-btn-icon:hover{
+  background-color: rgba(73,182,245, .1);
+  color:rgba(73,182,245, .1)
+}
+.delete-btn-icon{
+  background-color: rgba(230,83,60, .1);
+  color:rgba(230,83,60, .1)
+}
+.delete-btn-icon:hover{
+  background-color: rgba(230,83,60, .1);
+  color:white
+}
+
+.css-dip3t8{
+  background-color: rgb(23, 25, 30) !important;
+}
+
+
+
+.react-side-menu {
+  color: white;
+  padding: 10px;
+}
+
+.react-side-menu:hover {
+  background-color: #000000 !important;
+}
+
+.w-100{
+  width: 100% !important;
+}
+
+.text-dec{
+  color: white !important;
+  text-decoration: none !important;
+}
+
+.activity_div{
+  border-radius: 0.35rem !important;
+}
+
+
+
+#modehover1:hover #modeTheme {
+  display: block !important;
+}
+
+#modeTheme {
+  display: none !important;
+}
+
+.sidebar_tab{
+  background-color: rgb(23, 25, 30) !important;
+  color: white !important;
+}
+
+.sidebar_tab:hover{
+  background-color: rgb(23, 25, 30) !important;
+  color: black !important;
 }

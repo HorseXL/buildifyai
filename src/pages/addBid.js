@@ -104,6 +104,6 @@ function AddbidData() {
   )
 }
 function Addbid() {
-    return <Layout data={<AddbidData />} />
+    return <Layout data={<AddbidData />}/>
   }
   export default Addbid;

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import logo from "../assets/images/logoWhite.png"
+import logo from "../assets/images/buildyfyaiWhite.png"
 import sketchy from "../assets/images/1.png"
 import { Link, useNavigate } from "react-router-dom";
 import $ from "jquery";
@@ -71,6 +71,10 @@ export default function Header() {
 	const activeMenuName = window.localStorage.getItem("activeTab");
 	const activeSubMenuName = window.localStorage.getItem("activeTabSub");
 
+	const [mode, setMode] = useState('light'); 
+	const handleModeChange = (newMode) => {
+		setMode(newMode);
+	  };
 	// profile details api call
 	const profileDetailsApi = async () => {
         let data = {};
@@ -104,8 +108,9 @@ export default function Header() {
 			{/* <!--begin::Header--> */}
 
 			<div id="kt_app_header" className="app-header sticky-top" style={{ backgroundColor: '#17191E' }}>
+
 				{/* <!--begin::Header container--> */}
-				<div className="app-container container-xxl d-flex align-items-stretch justify-content-between" id="kt_app_header_container">
+				<div className="app-container container-xl d-flex align-items-stretch" style={{paddingLeft:"1px"}} id="kt_app_header_container">
 					{/* <!--begin::Header mobile toggle--> */}
 					<div className="d-flex align-items-center d-lg-none ms-n2 me-2" title="Show sidebar menu">
 						<div className="btn btn-icon btn-active-color-primary w-35px h-35px" id="kt_app_header_menu_toggle" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
@@ -203,7 +208,7 @@ export default function Header() {
 												</span>
 												<div className="w_160 d-none" id="projectManagementSub">
 													<div className="menu-item">
-														<Link className="menu-link" style={{ color: '#5e6278' }} to="#">
+														<Link className="menu-link" style={{ color: '#5e6278' }} to="../projectmanagement/">
 															<span className="menu-icon">
 																<i className="ki-outline ki-calendar fs-2"></i>
 															</span>
@@ -399,10 +404,10 @@ export default function Header() {
 						</div>
 					</div>
 					{/* <!--begin::Logo--> */}
-					<div className="d-flex align-items-center flex-grow-1 flex-lg-grow-0 me-lg-18">
-						<Link to={accountType == "OWNER" ? `../ownerdashboard/` : accountType == "BUILDER" ? '../builderdashboard/' : '../subcontractordashboard/'}>
+					<div className="d-flex align-items-center flex-grow-1 flex-lg-grow-0 me-lg-18 ">
+						<Link className='me-5' to={accountType == "OWNER" ? `../ownerdashboard/` : accountType == "BUILDER" ? '../builderdashboard/' : '../subcontractordashboard/'}>
 							<img alt="Logo" src={logo} className="h-25px d-sm-none" />
-							<img alt="Logo" src={logo} className="h-60px d-none d-sm-block" />
+							<img alt="Logo" src={logo} className="h-60px d-none d-sm-block me-5" />
 						</Link>
 					</div>
 					{/* <!--end::Logo--> */}
@@ -416,7 +421,7 @@ export default function Header() {
 							<>
 
 								{/* <!--begin:Menu item--> */}
-								<div data-kt-menu-placement="bottom-start" className={`${activeMenuName == "dashboard" ? "activeMainMenu" : ""} menu-item menu-here-bg menu-lg-down-accordion me-0 me-lg-2`}>
+								<div data-kt-menu-placement="bottom-start" className={`${activeMenuName == "dashboard" ? "activeMainMenu" : ""} menu-item menu-here-bg menu-lg-down-accordion me-0 me-lg-2 d-none`}>
 									{/* <!--begin:Menu link--> */}
 									<Link onClick={() => handleSetactiveTab('dashboard', '')} to={accountType == "OWNER" ? `../ownerdashboard/` : accountType == "BUILDER" ? '../builderdashboard/' : '../subcontractordashboard/'} data-kt-menu-placement="bottom-start" className={`${activeMenuName == "dashboard" ? "text-white" : ""} menu-link`}>
 										<span className={`${activeMenuName == "dashboard" ? "text-white" : ""}menu-title`} style={{ fontSize: '1rem' }}>Dashboard</span>
@@ -426,6 +431,11 @@ export default function Header() {
 								{/* <!--end:Menu item--> */}
 							</>
 							)}
+							<div className="col-lg-11"></div>
+							<div className="col-lg-11"></div>
+							<div className="col-lg-11"></div>
+							<div className="col-lg-11"></div>
+							<div className="d-none">
 								{(accountType == 'BUILDER' || accountType == 'SUBCONTRACTOR') && (
 									<>
 										{/* <!--Begin:Business Hub Menu item--> */}
@@ -495,7 +505,7 @@ export default function Header() {
 												</span>
 												<div className="dropdown-menu w_160" aria-labelledby="dropdownMenuButton">
 													<div className="menu-item">
-														<Link onClick={() => handleSetactiveTab('Project Managment', 'Schedule')} className="menu-link" to="#" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-dismiss="click" data-bs-placement="right">
+														<Link onClick={() => handleSetactiveTab('Project Managment', 'Schedule')} className="menu-link" to="../projectmanagement/" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-dismiss="click" data-bs-placement="right">
 															<span className="menu-icon">
 																<i className={`ki-outline ki-calendar fs-2 ${activeSubMenuName == "Schedule" ? "text-primary" : ""}`}></i>
 															</span>
@@ -503,7 +513,15 @@ export default function Header() {
 														</Link>
 													</div>
 													<div className="menu-item">
-														<Link onClick={() => handleSetactiveTab('Project Managment', 'Tasks')} className="menu-link" to="../builderprojectdetails/" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-dismiss="click" data-bs-placement="right">
+														<Link onClick={() => handleSetactiveTab('Project Managment', 'Projects')} className="menu-link" to="../projectmanagement/" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-dismiss="click" data-bs-placement="right">
+															<span className="menu-icon">
+																<i className={`ki-outline ki-calendar fs-2 ${activeSubMenuName == "Projects" ? "text-primary" : ""}`}></i>
+															</span>
+															<span className={`${activeSubMenuName == "Projects" ? "text-primary" : ""} menu-title`}>Projects</span>
+														</Link>
+													</div>
+													<div className="menu-item">
+														<Link onClick={() => {handleSetactiveTab('Project Managment', 'Tasks');window.location.href = "../builderprojectdetails/"}} className="menu-link" to="../builderprojectdetails/" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-dismiss="click" data-bs-placement="right">
 															<span className="menu-icon">
 																<i className={`fa-solid fa-file-pen fs-3 ${activeSubMenuName == "Tasks" ? "text-primary" : ""}`}></i>
 															</span>
@@ -519,12 +537,13 @@ export default function Header() {
 														</Link>
 													</div>
 													<div className="menu-item">
-														<Link onClick={() => handleSetactiveTab('Project Managment', 'Change Orders')} className="menu-link" to="../builderprojectdetails/" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-dismiss="click" data-bs-placement="right">
-															<span className="menu-icon">
-																<i className={`fa-solid fa-rotate-right fs-3 ${activeSubMenuName == "Change Orders" ? "text-primary" : ""}`}></i>
-															</span>
-															<span className={`${activeSubMenuName == "Change Orders" ? "text-primary" : ""} menu-title`}>Change Orders</span>
-														</Link>
+													<Link onClick={() => {handleSetactiveTab('Project Managment', 'Change Orders'); window.location.href = "../builderprojectdetails/"}} className="menu-link"  data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-dismiss="click" data-bs-placement="right">
+														<span className="menu-icon">
+															<i className={`fa-solid fa-rotate-right fs-3 ${activeSubMenuName == "Change Orders" ? "text-primary" : ""}`}></i>
+														</span>
+														<span className={`${activeSubMenuName == "Change Orders" ? "text-primary" : ""} menu-title`}>Change Orders</span>
+													</Link>
+
 													</div>
 													<div className="menu-item">
 														<Link onClick={() => handleSetactiveTab('Project Managment', 'Purchase Order')} className="menu-link" to="#" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-dismiss="click" data-bs-placement="right">
@@ -690,6 +709,7 @@ export default function Header() {
 										{/* <!--end:Tools Menu item--> */}
 									</>
 								)}
+								</div>
 								<div data-kt-menu-placement="bottom-start" className="me-0 my-auto">
 									<div className="card-toolbar">
 										<i className="ki-outline ki-magnifier fs-3 text-muted position-absolute ms-4 mt-4"></i>
@@ -1137,7 +1157,61 @@ export default function Header() {
 											{/* <!--begin:Menu item--> */}
 											<div className="menu-item">
 												<Link to="../profile/" className="menu-link text-black fw-semibold px-5">My Profile</Link>
+											
 											</div>
+											<div className="dropdown" id="modehover1">
+    <div className="cursor-pointer symbol symbol-35px symbol-md-40px" id="mode_div">
+        <div className="menu-item" data-kt-menu-trigger="{default: 'hover', lg: 'hover'}" data-kt-menu-placement="left-end" data-kt-menu-offset="-15px, 0">
+            <Link to="#" className="menu-link text-black fw-semibold px-5">Mode
+                <span className="col-lg-12"></span>
+                <span className="col-12"></span>
+                <span className="col-12"></span>
+				<span className="menu-badge">
+					{mode === 'light' && <i className="ki-outline ki-night-day theme-light-show fs-2"></i>}
+					{mode === 'dark' && <i className="ki-outline ki-moon theme-dark-show fs-2"></i>}
+					{mode === 'system' && <i className="ki-outline ki-screen fs-2"></i>}
+					{/* <span className="badge badge-light-danger badge-circle fw-bold fs-7">3</span> */}
+				</span>
+            </Link>
+            {/*begin::Menu*/}
+            <div className="dropdown-menu my-lg-n8 mx-lg-n8 d-none dropdownContent menu-rounded menu-title-gray-700 menu-icon-gray-500 menu-active-bg menu-state-color fw-semibold py-4 fs-base w-150px" id="modeTheme" aria-labelledby="mode_div" data-kt-menu="true" data-kt-element="theme-mode-menu">
+                {/*begin::Menu item*/}
+                <div className="menu-item px-3 my-0">
+                    <Link to="#" className="menu-link px-3 py-2" onClick={() => handleModeChange('light')}>
+                        <span className="menu-icon">
+                            <i className="ki-outline ki-night-day fs-2"></i>
+                        </span>
+                        <span className="menu-title">Light</span>
+                    </Link>
+                </div>
+                {/*end::Menu item*/}
+                {/*begin::Menu item*/}
+                <div className="menu-item px-3 my-0">
+                    <Link to="#" className="menu-link px-3 py-2" onClick={() => handleModeChange('dark')}>
+                        <span className="menu-icon">
+                            <i className="ki-outline ki-moon fs-2"></i>
+                        </span>
+                        <span className="menu-title">Dark</span>
+                    </Link>
+                </div>
+                {/*end::Menu item*/}
+                {/*begin::Menu item*/}
+                <div className="menu-item px-3 my-0">
+                    <Link to="#" className="menu-link px-3 py-2" onClick={() => handleModeChange('system')}>
+                        <span className="menu-icon">
+                            <i className="ki-outline ki-screen fs-2"></i>
+                        </span>
+                        <span className="menu-title">System</span>
+                    </Link>
+                </div>
+                {/*end::Menu item*/}
+            </div>
+            {/*end::Menu*/}
+        </div>
+    </div>
+</div>
+
+
 											{/* <!--end:Menu item--> */}
 											{/* <!--begin:Menu item--> */}
 											<div className="menu-item">
