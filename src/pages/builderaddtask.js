@@ -223,9 +223,9 @@ function AddtaskDate() {
                                                {/*begin::Icon*/}
                                                {/*end::Icon*/}
                                                {/*begin::Datepicker*/}
-                                               <input class="form-control form-control-solid ps-12 scheduleDateClass"
-                                                            placeholder="Select a date" name="due_date" type="date" id='scheduleDate'/>
-                                                            <i class="ki-outline ki-calendar-8 fs-2 position-absolute mx-4 cursor-pointer"  style={{right:"0"}}></i>
+                                                <input class="form-control form-control-solid ps-12"
+                                                    placeholder="Select a date" name="due_date" type="date" />
+                                                    <i class="ki-outline ki-calendar-8 fs-2 position-absolute mx-4"></i>
                                                    {/*end::Datepicker*/}
                                             </div>
                                         </div>
@@ -240,9 +240,8 @@ function AddtaskDate() {
                                                 {/* <i class="ki-outline ki-calendar-8 fs-2 position-absolute mx-4"></i> */}
                                                {/*end::Icon*/}
                                                {/*begin::Datepicker*/}
-                                               <input class="form-control form-control-solid ps-12 scheduleDateClass"
-                                                            placeholder="Select a date" name="due_date" type="date" id='scheduleDate'/>
-                                                            <i class="ki-outline ki-calendar-8 fs-2 position-absolute mx-4 cursor-pointer"  style={{right:"0"}}></i>
+                                                <input class="form-control form-control-solid ps-12 flatpickr-input"
+                                                    placeholder="Select a date" name="due_date" type="date" />
                                                    {/*end::Datepicker*/}
                                             </div>
                                         </div>

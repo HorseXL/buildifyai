@@ -66,7 +66,7 @@ function ViewBusinessFinancesData() {
 										{/* <!--begin::Tbody--> */}
 										<tbody className="fs-6 fw-semibold text-gray-600">
 											<tr>
-												<td className="ps-9 text-primary">102445788</td>
+												<td className="ps-9">102445788</td>
 												<td className="ps-0">Nov 01, 2023</td>
 												<td>Darknight transparency 36 Icons Pack</td>
 												<td className="text-success">$38.00</td>
@@ -75,7 +75,7 @@ function ViewBusinessFinancesData() {
 												</td>
 											</tr>
 											<tr>
-												<td className="ps-9  text-primary">423445721</td>
+												<td className="ps-9">423445721</td>
 												<td className="ps-0">Oct 24, 2023</td>
 												<td>Seller Fee</td>
 												<td className="text-danger">$-2.60</td>
@@ -84,7 +84,7 @@ function ViewBusinessFinancesData() {
 												</td>
 											</tr>
 											<tr>
-												<td className="ps-9  text-primary">312445984</td>
+												<td className="ps-9">312445984</td>
 												<td className="ps-0">Oct 08, 2023</td>
 												<td>Cartoon Mobile Emoji Phone Pack</td>
 												<td className="text-success">$76.00</td>
@@ -93,7 +93,7 @@ function ViewBusinessFinancesData() {
 												</td>
 											</tr>
 											<tr>
-												<td className="ps-9  text-primary">312445984</td>
+												<td className="ps-9">312445984</td>
 												<td className="ps-0">Sep 15, 2023</td>
 												<td>Iphone 12 Pro Mockup Mega Bundle</td>
 												<td className="text-success">$5.00</td>
@@ -102,7 +102,7 @@ function ViewBusinessFinancesData() {
 												</td>
 											</tr>
 											<tr>
-												<td className="ps-9  text-primary">523445943</td>
+												<td className="ps-9">523445943</td>
 												<td className="ps-0">May 30, 2023</td>
 												<td>Seller Fee</td>
 												<td className="text-danger">$-1.30</td>
@@ -111,7 +111,7 @@ function ViewBusinessFinancesData() {
 												</td>
 											</tr>
 											<tr>
-												<td className="ps-9  text-primary">231445943</td>
+												<td className="ps-9">231445943</td>
 												<td className="ps-0">Apr 22, 2023</td>
 												<td>Parcel Shipping / Delivery Service App</td>
 												<td className="text-success">$204.00</td>
@@ -120,7 +120,7 @@ function ViewBusinessFinancesData() {
 												</td>
 											</tr>
 											<tr>
-												<td className="ps-9  text-primary">426445943</td>
+												<td className="ps-9">426445943</td>
 												<td className="ps-0">Feb 09, 2023</td>
 												<td>Visual Design Illustration</td>
 												<td className="text-success">$31.00</td>
@@ -129,7 +129,7 @@ function ViewBusinessFinancesData() {
 												</td>
 											</tr>
 											<tr>
-												<td className="ps-9  text-primary">984445943</td>
+												<td className="ps-9">984445943</td>
 												<td className="ps-0">Nov 01, 2023</td>
 												<td>Abstract Vusial Pack</td>
 												<td className="text-success">$52.00</td>
@@ -138,7 +138,7 @@ function ViewBusinessFinancesData() {
 												</td>
 											</tr>
 											<tr>
-												<td className="ps-9  text-primary">324442313</td>
+												<td className="ps-9">324442313</td>
 												<td className="ps-0">Jan 04, 2023</td>
 												<td>Seller Fee</td>
 												<td className="text-danger">$-0.80</td>

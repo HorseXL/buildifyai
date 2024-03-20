@@ -28,7 +28,6 @@ import Invitedsubcontractor from "./pages/invitedsubcontractor";
 import Viewbid from "./pages/viewbid";
 import AddBid from "./pages/addBid";
 import Specificationdetail from "./pages/specificationdetail";
-import ProjectManagement from "./pages/projectmanagement";
 
 // builder url
 import BuilderDashboard from "./pages/builderdashboard";
@@ -48,9 +47,6 @@ import Manageteam from "./pages/manageteam";
 import Addteammember from "./pages/addteammember";
 import Viewchangeorder from "./pages/viewchangeorder";
 import Addchangeorder from "./pages/addchangeorder";
-import Buildifyaichat from "./pages/buildifyaichat";
-import BudgetForecast from "./pages/budgetForecast";
-import CompanySettings from "./pages/companysettings";
 
 function App() {
 
@@ -96,11 +92,6 @@ function App() {
         <Route path="/viewsalesleads" element={<ViewSalesLeads />} />
         <Route path="/manageteam" element={<Manageteam />} />
         <Route path="/addteammember" element={<Addteammember />} />
-        <Route path="/buildifyaichat" element={<Buildifyaichat />} />
-        <Route path="/budgetforecast" element={<BudgetForecast />} />
-        <Route path="/companysettings" element={<CompanySettings />} />
-        <Route path="/projectManagement" element={<ProjectManagement />} />
-
       </Routes>
     {/* </Router> */}
    

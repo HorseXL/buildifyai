@@ -24,7 +24,7 @@ function SpecificationData() {
                 <div class="d-flex flex-column flex-lg-row flex-column-fluid stepper stepper-pills stepper-column stepper-multistep"
                     id="kt_create_account_stepper">
                     {/* <!--begin::Aside--> */}
-                    <div class="d-flex flex-lg-row-auto w-lg-300px w-xl-300px specification_side_bar">
+                    <div class="d-flex flex-column flex-lg-row-auto w-lg-300px w-xl-300px specification_side_bar">
                         <div class="d-flex flex-column bottom-0 w-lg-300px w-xl-300px bgi-size-cover bgi-position-center specificationBG">
                             {/* <!--begin::Body--> */}
                             <div class="">

@@ -1260,14 +1260,14 @@ function SummaryData() {
 												{/* end::Symbol */}
 												{/* begin::Title */}
 												<div>
-													<Link to="../builderprojectdetails/" class="fs-6 text-gray-800 text-hover-primary fw-bold">Jim's Plumbing</Link>
+													<a href="#" class="fs-6 text-gray-800 text-hover-primary fw-bold">Jim's Plumbing</a>
 													<div class="fs-7 text-muted fw-semibold mt-1">Upcoming Bills</div>
 												</div>
 												{/* end::Title */}
 											</div>
 											{/* end::Section */}
 											{/* begin::Label */}
-											<div class="badge badge-light badge-lg fw-bold p-2 text-gray-600"><i class="ki-outline ki-arrow-down-right fs-2 text-danger me-2"></i>$6,700</div>
+											<div class="badge badge-light badge-lg fw-bold p-2 text-gray-600">$6,700</div>
 											{/* end::Label */}
 										</div>
 										{/* end::Item */}
@@ -1282,14 +1282,14 @@ function SummaryData() {
 												{/* end::Symbol */}
 												{/* begin::Title */}
 												<div>
-													<Link to="../builderprojectdetails/" class="fs-6 text-gray-800 text-hover-primary fw-bold">Bob's Electric</Link>
+													<a href="#" class="fs-6 text-gray-800 text-hover-primary fw-bold">Bob's Electric</a>
 													<div class="fs-7 text-muted fw-semibold mt-1">Upcoming Bills</div>
 												</div>
 												{/* end::Title */}
 											</div>
 											{/* end::Section */}
 											{/* begin::Label */}
-											<div class="badge badge-light badge-lg fw-bold p-2 text-gray-600"><i class="ki-outline ki-arrow-down-right fs-2 text-danger me-2"></i>$4,250</div>
+											<div class="badge badge-light badge-lg fw-bold p-2 text-gray-600">$4,250</div>
 											{/* end::Label */}
 										</div>
 										{/* end::Item */}
@@ -1304,14 +1304,14 @@ function SummaryData() {
 												{/* end::Symbol */}
 												{/* begin::Title */}
 												<div>
-													<Link to="../builderprojectdetails/" class="fs-6 text-gray-800 text-hover-primary fw-bold">Jim's Plumbing</Link>
+													<a href="#" class="fs-6 text-gray-800 text-hover-primary fw-bold">Jim's Plumbing</a>
 													<div class="fs-7 text-muted fw-semibold mt-1">Upcoming Payment</div>
 												</div>
 												{/* end::Title */}
 											</div>
 											{/* end::Section */}
 											{/* begin::Label */}
-											<div class="badge badge-light badge-lg fw-bold p-2 text-gray-600"><i class="ki-outline ki-arrow-up-right fs-2 text-success me-2"></i>$4,500</div>
+											<div class="badge badge-light badge-lg fw-bold p-2 text-gray-600">$4,500</div>
 											{/* end::Label */}
 										</div>
 										{/* end::Item */}
@@ -1326,14 +1326,14 @@ function SummaryData() {
 												{/* end::Symbol */}
 												{/* begin::Title */}
 												<div>
-													<Link to="../builderprojectdetails/" class="fs-6 text-gray-800 text-hover-primary fw-bold">Bob's Electric</Link>
+													<a href="#" class="fs-6 text-gray-800 text-hover-primary fw-bold">Bob's Electric</a>
 													<div class="fs-7 text-muted fw-semibold mt-1">Upcoming Payment</div>
 												</div>
 												{/* end::Title */}
 											</div>
 											{/* end::Section */}
 											{/* begin::Label */}
-											<div class="badge badge-light badge-lg fw-bold p-2 text-gray-600"><i class="ki-outline ki-arrow-up-right fs-2 text-success me-2"></i>$3,500</div>
+											<div class="badge badge-light badge-lg fw-bold p-2 text-gray-600">$3,500</div>
 											{/* end::Label */}
 										</div>
 										{/* end::Item */}
@@ -1411,21 +1411,9 @@ function SummaryData() {
 					</div>
 					<div className="row g-5 g-xl-10 mb-xl-10 my-1">
 						<div className="col-lg-12">
-						<div className="google-map-code">
-    <iframe
-        title='map'
-        className='rounded shadow'
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2366340.85582478!2d-80.72000033996646!3d35.004765747500755!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88541fc4fc381a81%3A0xad3f30f5e922ae19!2sNorth%20Carolina%2C%20USA!5e0!3m2!1sen!2sin!4v1706622315383!5m2!1sen!2sin"
-        width="100%"
-        height="450"
-        frameborder="0"
-        style={{ border: "0px" }}
-        allowFullScreen=""
-        aria-hidden="false"
-        tabIndex="0"
-    ></iframe>
-</div>
-
+							<div className="google-map-code">
+								<iframe title='map' className='rounded shadow' src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15282225.79979123!2d73.7250245393691!3d20.750301298393563!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30635ff06b92b791%3A0xd78c4fa1854213a6!2sIndia!5e0!3m2!1sen!2sin!4v1587818542745!5m2!1sen!2sin" width="100%" height="450" frameborder="0" style={{ border: "0px" }} allowFullScreen="" aria-hidden="false" tabIndex="0"></iframe>
+							</div>
 						</div>
 
 					</div>

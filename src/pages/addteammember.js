@@ -90,23 +90,12 @@ function AddteammemberData() {
                                                     
                                                 </div>
                                                 <div className="col-lg-6">
-    <label className="form-label fs-6 fw-bold text-gray-700 mb-3">Contact Number 2</label>
-    {/* <!--begin::Input group--> */}
-    <div className="mb-5">
-        <div className="input-group">
-            {/* Country Code Dropdown */}
-            <select className="form-control form-control-solid" style={{maxWidth:"92px"}}>
-                <option value="+1">+1 (USA)</option>
-                <option value="+44">+44 (UK)</option> 
-            </select>
-            
-            {/* Contact Number Input */}
-            <input type="text" className="form-control form-control-solid" placeholder="Contact Number 2"/>
-            <button type="text" className="btn btnButton mx-2" placeholder="Contact Number 2">Verify Number</button>
-        </div>
-    </div>
-</div>
-
+                                                    <label className="form-label fs-6 fw-bold text-gray-700 mb-3">Contact Number 2</label>
+                                                    {/* <!--begin::Input group--> */}
+                                                    <div className="mb-5">
+                                                        <input type="text" className="form-control form-control-solid" placeholder="Contact Number 2"/>
+                                                    </div>
+                                                </div>
                                                 <div className="col-lg-6">
                                                     <label className="form-label fs-6 fw-bold text-gray-700 mb-3">Address</label>
                                                     {/* <!--begin::Input group--> */}
@@ -114,16 +103,14 @@ function AddteammemberData() {
                                                         <input type="text" className="form-control form-control-solid" placeholder="Enter Address" />
                                                     </div>
                                                 </div>
-                                                <div className="col-lg-6 row">
+                                                <div className="col-lg-6">
                                                     <label className="form-label fs-6 fw-bold text-gray-700 mb-3">Role</label>
                                                     {/* <!--begin::Input group--> */}
-                                                    <div className="mb-5 col-9">
+                                                    <div className="mb-5">
                                                         <Select options={roleOptions} type="text" className="form-control-solid" placeholder="Enter Address" />
                                                     </div>
-                                                    <div className="mt-2 col-3">
-                                                        <Link className='col-1'>Manage Role</Link>
-                                                    </div>
                                                 </div>
+                                                {/* <!--end::Col--> */}
                                             </div>
                                         </div>
                                         {/* <!--end::Wrapper--> */}

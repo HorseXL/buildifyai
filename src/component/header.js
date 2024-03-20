@@ -203,7 +203,7 @@ export default function Header() {
 												</span>
 												<div className="w_160 d-none" id="projectManagementSub">
 													<div className="menu-item">
-														<Link className="menu-link" style={{ color: '#5e6278' }} to="../projectmanagement/">
+														<Link className="menu-link" style={{ color: '#5e6278' }} to="#">
 															<span className="menu-icon">
 																<i className="ki-outline ki-calendar fs-2"></i>
 															</span>
@@ -219,7 +219,7 @@ export default function Header() {
 														</Link>
 													</div>
 													<div className="menu-item">
-														<Link className="menu-link" style={{ color: '#5e6278' }} to="#" >
+														<Link className="menu-link" style={{ color: '#5e6278' }} to="../specificationdetail/" >
 															<span className="menu-icon">
 																<i className="ki-outline ki-gear fs-2"></i>
 															</span>
@@ -239,7 +239,7 @@ export default function Header() {
 															<span className="menu-icon">
 																<i className="fa-solid fa-cart-shopping fs-2"></i>
 															</span>
-															<span className="menu-title">Progression Notes</span>
+															<span className="menu-title">Purchase Order</span>
 														</Link>
 													</div>
 												</div>
@@ -400,7 +400,7 @@ export default function Header() {
 					</div>
 					{/* <!--begin::Logo--> */}
 					<div className="d-flex align-items-center flex-grow-1 flex-lg-grow-0 me-lg-18">
-						<Link to="../buildifyaichat/">
+						<Link to={accountType == "OWNER" ? `../ownerdashboard/` : accountType == "BUILDER" ? '../builderdashboard/' : '../subcontractordashboard/'}>
 							<img alt="Logo" src={logo} className="h-25px d-sm-none" />
 							<img alt="Logo" src={logo} className="h-60px d-none d-sm-block" />
 						</Link>
@@ -495,7 +495,7 @@ export default function Header() {
 												</span>
 												<div className="dropdown-menu w_160" aria-labelledby="dropdownMenuButton">
 													<div className="menu-item">
-														<Link onClick={() => handleSetactiveTab('Project Managment', 'Schedule')} className="menu-link" to="../projectmanagement/" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-dismiss="click" data-bs-placement="right">
+														<Link onClick={() => handleSetactiveTab('Project Managment', 'Schedule')} className="menu-link" to="#" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-dismiss="click" data-bs-placement="right">
 															<span className="menu-icon">
 																<i className={`ki-outline ki-calendar fs-2 ${activeSubMenuName == "Schedule" ? "text-primary" : ""}`}></i>
 															</span>
@@ -503,7 +503,7 @@ export default function Header() {
 														</Link>
 													</div>
 													<div className="menu-item">
-														<Link onClick={() => {handleSetactiveTab('Project Managment', 'Tasks');window.location.href = "../builderprojectdetails/"}} className="menu-link" to="../builderprojectdetails/" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-dismiss="click" data-bs-placement="right">
+														<Link onClick={() => handleSetactiveTab('Project Managment', 'Tasks')} className="menu-link" to="../builderprojectdetails/" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-dismiss="click" data-bs-placement="right">
 															<span className="menu-icon">
 																<i className={`fa-solid fa-file-pen fs-3 ${activeSubMenuName == "Tasks" ? "text-primary" : ""}`}></i>
 															</span>
@@ -511,7 +511,7 @@ export default function Header() {
 														</Link>
 													</div>
 													<div className="menu-item">
-														<Link onClick={() => handleSetactiveTab('Project Managment', 'Specifications')} className="menu-link" to="#" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-dismiss="click" data-bs-placement="right">
+														<Link onClick={() => handleSetactiveTab('Project Managment', 'Specifications')} className="menu-link" to="../specificationdetail/" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-dismiss="click" data-bs-placement="right">
 															<span className="menu-icon">
 																<i className={`ki-outline ki-gear fs-2 ${activeSubMenuName == "Specifications" ? "text-primary" : ""}`}></i>
 															</span>
@@ -519,7 +519,7 @@ export default function Header() {
 														</Link>
 													</div>
 													<div className="menu-item">
-														<Link onClick={() => {handleSetactiveTab('Project Managment', 'Change Orders'); window.location.href = "../builderprojectdetails/"}} className="menu-link"  data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-dismiss="click" data-bs-placement="right">
+														<Link onClick={() => handleSetactiveTab('Project Managment', 'Change Orders')} className="menu-link" to="../builderprojectdetails/" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-dismiss="click" data-bs-placement="right">
 															<span className="menu-icon">
 																<i className={`fa-solid fa-rotate-right fs-3 ${activeSubMenuName == "Change Orders" ? "text-primary" : ""}`}></i>
 															</span>
@@ -534,14 +534,6 @@ export default function Header() {
 															<span className={`${activeSubMenuName == "Purchase Order" ? "text-primary" : ""} menu-title`}>Purchase Order</span>
 														</Link>
 													</div>
-													<div className="menu-item">
-														<Link onClick={() => handleSetactiveTab('Project Managment', 'Progression Notes')} className="menu-link" to="#" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-dismiss="click" data-bs-placement="right">
-															<span className="menu-icon">
-																<i className={`fa-solid fa-rotate-right fs-2 ${activeSubMenuName == "Progression Notes" ? "text-primary" : ""}`}></i>
-															</span>
-															<span className={`${activeSubMenuName == "Progression Notes" ? "text-primary" : ""} menu-title`}>Progression Notes</span>
-														</Link>
-													</div>
 												</div>
 											</div>
 										</div>
@@ -554,7 +546,7 @@ export default function Header() {
 												</span>
 												<div className="dropdown-menu w_160" aria-labelledby="dropdownMenuButton">
 													<div className="menu-item">
-														<Link onClick={() => handleSetactiveTab('Finance', 'Budget/Forecast')} className="menu-link" to="../budgetforecast/" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-dismiss="click" data-bs-placement="right">
+														<Link onClick={() => handleSetactiveTab('Finance', 'Budget/Forecast')} className="menu-link" to="#" data-bs-toggle="tooltip" data-bs-trigger="hover" data-bs-dismiss="click" data-bs-placement="right">
 															<span className="menu-icon">
 																<i className={`fa-solid fa-sack-dollar fs-2 ${activeSubMenuName == "Budget/Forecast" ? "text-primary" : ""}`}></i>
 															</span>
@@ -1145,11 +1137,6 @@ export default function Header() {
 											{/* <!--begin:Menu item--> */}
 											<div className="menu-item">
 												<Link to="../profile/" className="menu-link text-black fw-semibold px-5">My Profile</Link>
-											</div>
-											{/* <!--end:Menu item--> */}
-											{/* <!--begin:Menu item--> */}
-											<div className="menu-item">
-												<Link to="../companysettings/" className="menu-link text-black fw-semibold px-5">Settings</Link>
 											</div>
 											{/* <!--end:Menu item--> */}
 											{/* <!--begin:Menu item--> */}
